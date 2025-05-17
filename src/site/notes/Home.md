@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/home/","tags":["gardenEntry"]}
 ---
 
-This is my attempt at [[musings/Digital Gardening\|Digital Gardening]].
+This is my attempt at [[Digital Gardening\|Digital Gardening]].
 
 I'm mostly writing for me, but maybe some of these pages are helpful to you too.
 
