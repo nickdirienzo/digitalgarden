@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/obsidian-digital-garden-on-cloudflare/"}
 ---
 
-I'm using the [Obsidian Digital Garden Plugin](https://dg-docs.ole.dev) for my [[musings/Digital Gardening\|Digital Gardening]].
+I'm using the [Obsidian Digital Garden Plugin](https://dg-docs.ole.dev) for my [[Digital Gardening\|Digital Gardening]].
 
 The plugin's default recommendation is Vercel. I tend to not use Vercel for a variety of reasons.
 
