@@ -6,12 +6,11 @@ I'm using the [Obsidian Digital Garden Plugin](https://dg-docs.ole.dev) for my [
 
 The plugin's default recommendation is Vercel. I tend to not use Vercel for a variety of reasons.
 
-Instead I'm publishing on Cloudflare, but it didn't immediately work. 
+Instead I'm publishing on Cloudflare Pages. I've used CF Pages for a number of static sites and single page apps over the last couple of years. It's been a great experience and it'll be fun to use more of the Cloudflare products over time.
 
-So here's some notes in case it's helpful to future me or someone else.
-
-You'll want to set the following settings on Cloudflare Pages:
-
+Sadly, it didn't immediately work when selecting 11ty as the framework. It's because there's some custom build tooling. I had to set the following options and then everything was good:
 - Framework preset: None
 - Build command: `npm run build`
 - Build output directory: `dist`
+
+As a fun bonus of this side quest, Cloudflare now manages my DNS.
