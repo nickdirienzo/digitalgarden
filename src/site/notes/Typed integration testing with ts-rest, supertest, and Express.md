@@ -20,3 +20,4 @@ I'm simplifying the code as I copy paste so I wouldn't expect it to work with a 
 
 The part that brings `supertest` and `ts-rest` together is specifically this bit: <script src="https://gist.github.com/nickdirienzo/73d6cfb6caf29c56219340a7546ebd9c.js?file=tsRest.ts"></script>
 
+And if there's a better way to do this, I'd love to hear about it.
