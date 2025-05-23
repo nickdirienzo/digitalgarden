@@ -6,7 +6,7 @@ One of [[Mirage Security \| our interview questions]] is around formatting phone
 
 For us, this problem is challenging because we sync enterprise directory data where formats are all over the place, country codes may or may not exist, and there might be nested numbers where one has preference.
 
-So I built a dataset in support of this question to dive deep. How do you think about this problem? What options do we have when dealing with a gnarly dataset like this?
+So I built a dataset in support of this question to dive deep. How do you approach problems like these? What options do we have when dealing with a gnarly dataset like this? Is this a good use case for AI?
 
 This isn't about how to answer those questions well, but I did find generating this dataset really interesting. And I learned that `libphonenumber-js` has a built-in function for generating example phone numbers: `getExampleNumber`.
 
