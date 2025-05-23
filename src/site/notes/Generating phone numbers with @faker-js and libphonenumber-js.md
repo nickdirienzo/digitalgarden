@@ -8,7 +8,7 @@ For us, this problem is challenging because we sync enterprise directory data wh
 
 So I built a dataset in support of this question to dive deep. How do you approach problems like these? What options do we have when dealing with a gnarly dataset like this? Is this a good use case for AI?
 
-This isn't about how to answer those questions well, but I did find generating this dataset really interesting. And I learned that `libphonenumber-js` has a built-in function for generating example phone numbers: `getExampleNumber`.
+This isn't about how to answer those questions well, but I did find generating this dataset really interesting and fun. And I learned that `libphonenumber-js` has a built-in function for generating example phone numbers: `getExampleNumber`.
 
 We can mimic this messy data a couple of ways:
 1. Using `faker.phone.number()`: by default, this uses the `"human"` format, which generates numbers like: "1-317-870-1507 x49566", "861.911.5285", and "(978) 485-5429", so we can provide cases around country codes and extensions being available or not.
