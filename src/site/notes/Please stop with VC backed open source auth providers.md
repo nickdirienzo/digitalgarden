@@ -16,7 +16,7 @@ These projects aren't even open source in nature; at best they're open core. Eve
 
 Ory’s been doing great work here for a long time. But they did raise a $22M Series A in 2022 (congrats team Ory!) so we'll see how things play out over time. Candidly, I haven't been paying too close an eye but I've only ever heard good things.
 
-At least companies like WorkOS and Auth0/Okta are clear that you're locked into cloud pricing. At least they're not pretending to be an open source project. You are paying for a company to manage this problem for you -- you know what you're buying that lock-in.
+Companies like WorkOS and Auth0/Okta are clear that you're locked into cloud pricing. At least they're not pretending to be an open source project. You are paying for a company to manage this problem for you -- you know what you're buying that lock-in.
 
 Getting authentication right is a core part of every business. Yes, you can (and probably should) outsource it. But there are better, real open source alternatives that do exist and are solving the "CIAM" problem (omg when did a Gartner category appear for this space). We should be spending our resources supporting these real open source projects instead so they can build for the larger software community:
 
