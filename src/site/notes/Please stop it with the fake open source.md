@@ -32,6 +32,10 @@ There's a whole [ecosystem of plugins](https://www.keycloak.org/extensions) whic
 
 It's frustrating seeing a core piece of infrastructure be touted as open source but actually not be. I really wish we would stop this practice for lead gen.
 
-For identity management, some of this is getting easier because major identity platforms are providing APIs for directory syncing: Microsoft's Graph API is finally good and Google Workspace has APIs for getting users. Many, many, many companies use one of these two products for managing their users. For auth, login with Google and Entra are effectively OAuth2 at this point and SSO has become easier to implement.
+For identity management, some of this is getting easier because major identity platforms are providing APIs for directory syncing: Microsoft's Graph API is finally good and Google Workspace has APIs for users. 
 
-I think this should give more companies the options to support the enterprise through direct API integrations instead of some kinda-open-source-VC-backed-auth-provider. Hopefully we can stop rebuilding auth every year as a new startup and instead invest in solutions that are truly open, sustainable and portable. 
+For auth, login with Google and Entra are effectively standard OAuth2. A number of companies have consolidated around Okta for SSO. And SSO has never been easier to implement ([passport-saml](https://www.passportjs.org/packages/passport-saml/), [django-saml2-auth](https://github.com/grafana/django-saml2-auth), etc).
+
+There are so many companies out there that rely on Microsoft or Google. I don't think you need some middleware open-core SaaS vendor in the middle anymore. You can instead directly integrate with the identity platforms instead. 
+
+Hopefully we can stop rebuilding auth every year as a new startup and instead invest in solutions that are truly open, sustainable and portable. 
