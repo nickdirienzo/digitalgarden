@@ -10,9 +10,10 @@ This feels like the 4th time this year I've come across an "open source" project
 
 These projects aren't even open source in nature; at best they're open core. Everything you _actually_ need to deploy these into production are behind a paywall. At worst, it's a gross bait and switch. I wish I were making this up. Here are some pricing pages for some up and coming projects in the space.
 
-* [Tesseral](https://github.com/tesseral-labs/tesseral): you can't even run on your own domain for < $250/mo ![Pasted image 20250528194401.png](/img/user/Pasted%20image%2020250528194401.png)
-* [SuperTokens](https://supertokens.com/): multi-tenancy doesn't even come in the free self-hosted version ![Pasted image 20250528194347.png](/img/user/Pasted%20image%2020250528194347.png)
-* [BoxyHQ](https://boxyhq.com): why are SSO and Directory Sync in Free Forever and Self Hosted Premium? Guess you have to pay for custom branding. ![Pasted image 20250528194528.png](/img/user/Pasted%20image%2020250528194528.png)
+[Tesseral](https://github.com/tesseral-labs/tesseral): you can't even run on your own domain for < $250/mo ![Pasted image 20250528194401.png](/img/user/Pasted%20image%2020250528194401.png)
+[SuperTokens](https://supertokens.com/): multi-tenancy doesn't even come in the free self-hosted version ![Pasted image 20250528194347.png](/img/user/Pasted%20image%2020250528194347.png)
+[BoxyHQ](https://boxyhq.com): why are SSO and Directory Sync in Free Forever and Self Hosted Premium? Guess you have to pay for custom branding. ![Pasted image 20250528194528.png](/img/user/Pasted%20image%2020250528194528.png)
+
 Ory's been doing great work here for a long time. They get a bit of a pass, but they also raised a $22M Series A in 2022 (congrats team Ory!). 
 
 At least companies like WorkOS and Auth0/Okta are clear that you're locked into cloud pricing. I don't love those models either, but at least they're not pretending to be an open source project. You are paying for a company to manage this problem for you -- you know what you're buying that lock-in.
