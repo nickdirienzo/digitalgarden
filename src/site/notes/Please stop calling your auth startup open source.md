@@ -28,7 +28,7 @@ Getting authentication right is a core part of every business. You can (and prob
 
 There's a whole [ecosystem of plugins](https://www.keycloak.org/extensions) which gives a chance for companies to contribute back openly so everyone can benefit. Originally organizations were supported by one of these extensions and now it's becoming a part of the core functionality. This is a win for Keycloak and a win for the software industry.
 
-Auth feels like it should be solved territory by now. Logging in with Google or Microsoft Entra are standard OAuth2 flows. A ton of companies have standardized around Okta for SSO. And supporting SSO is achievable through a number of open source projects like Keycloak, [passport-saml](https://www.passportjs.org/packages/passport-saml/), [django-saml2-auth](https://github.com/grafana/django-saml2-auth), and others.
+Auth feels like it should be solved territory by now. Logging in with Google or Microsoft Entra is a standard OAuth2 flow. A ton of companies have standardized around Okta for SSO. And supporting SSO is achievable through a number of open source projects like Keycloak, [passport-saml](https://www.passportjs.org/packages/passport-saml/), [django-saml2-auth](https://github.com/grafana/django-saml2-auth), and others.
 
 ## Where do we go from here?
 
