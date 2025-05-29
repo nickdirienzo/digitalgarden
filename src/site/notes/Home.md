@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/home/","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/home/","tags":["gardenEntry"],"created":"2025-05-17T13:45:30.437-07:00","updated":"2025-05-17T13:48:07.205-07:00"}
 ---
 
 This is my attempt at [[Digital Gardening\|Digital Gardening]].

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/digital-gardening/"}
+{"dg-publish":true,"permalink":"/digital-gardening/","created":"2025-05-17T12:30:46.025-07:00","updated":"2025-05-17T13:35:06.263-07:00"}
 ---
 
 A couple months ago, I asked a friend about his homelab setup. He sent me a link to his website. I didn't even realize he had one, so I clicked around some more and came across the phrase "digital garden." 
