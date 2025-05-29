@@ -14,7 +14,7 @@ These projects aren't even open source in nature; at best they're open core. Eve
 [SuperTokens](https://supertokens.com/): multi-tenancy doesn't even come in the free self-hosted version ![Pasted image 20250528194347.png](/img/user/Pasted%20image%2020250528194347.png)
 [BoxyHQ](https://boxyhq.com): why are SSO and Directory Sync in Free Forever and Self Hosted Premium? Guess you have to pay for custom branding. ![Pasted image 20250528194528.png](/img/user/Pasted%20image%2020250528194528.png)
 
-Ory's been doing great work here for a long time. They get a bit of a pass, but they also raised a $22M Series A in 2022 (congrats team Ory!). 
+Ory’s been doing great work here for a long time. But they did raise a $22M Series A in 2022 (congrats team Ory!) so we'll see how things play out over time. Candidly, I haven't been paying too close an eye but I've only ever heard good things.
 
 At least companies like WorkOS and Auth0/Okta are clear that you're locked into cloud pricing. I don't love those models either, but at least they're not pretending to be an open source project. You are paying for a company to manage this problem for you -- you know what you're buying that lock-in.
 
