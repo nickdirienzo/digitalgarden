@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/please-stop-with-vc-backed-open-source-auth-providers/"}
 ---
 
-I saw yet another Show HN for "open source B2B SaaS auth-in-a-box" today. Here's all the login types you could want, SSO, SCIM, and self-service configuration. But you have to pay for something for this to be production ready.
+I saw yet another Show HN for "open source B2B SaaS auth-in-a-box" today. Here's all the login types you could want, SSO, SCIM, and self-service configuration -- all on GitHub! But you have to pay for *something* for this to be production ready.
 
 I get it. There is enterprise value to be had and building for the enterprise is hard. 
 
