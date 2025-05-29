@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/typed-integration-testing-with-ts-rest-supertest-and-express/"}
 ---
 
-We've been happily using `ts-rest` at [[Mirage Security\|Mirage Security]] for about a year now. There's more to be written about why we went with `ts-rest` and how we use it to efficiently build features. This is about testing with it because I couldn't find any clear guides on how to test `ts-rest` and there's an unanswered [question in Discord](https://discord.com/channels/1055855205960392724/1055857825831731200/1259172105677836298) so here's how we approached it.
+We've been happily using `ts-rest` at Mirage Security for about a year now. There's more to be written about why we went with `ts-rest` and how we use it to efficiently build features. This is about testing with it because I couldn't find any clear guides on how to test `ts-rest` and there's an unanswered [question in Discord](https://discord.com/channels/1055855205960392724/1055857825831731200/1259172105677836298) so here's how we approached it.
 
 When building APIs, I've found integration tests to be the more valuable kinds of tests to write than unit tests. You can codify expected end-user API behavior in tests, can validate database state, and generally have more confidence it'll work in production. With agentic coding tools like VSCode Copilot or Windsurf Cascade, the cost of writing these kinds of tests become 0 so we have way more test coverage than I would have expected at this stage while still shipping incredibly quickly.
 
