@@ -20,7 +20,7 @@ At least companies like WorkOS and Auth0/Okta are clear that you're locked into 
 
 Getting authentication right is a core part of every business. Yes, you can (and probably should) outsource it. But there are better, real open source alternatives that do exist and are solving the "CIAM" problem (omg when did a Gartner category appear for this space). We should be spending our resources supporting these real open source projects instead so they can build for the larger software community:
 
- Keycloak (supported by CNCF) has been doing a fantastic job here for over 10 years. They now support Organizations and there's work to be done still, but the path is there for true open source auth support. (Thanks Keycloak maintainers and CNCF!)
+ [Keycloak](https://www.keycloak.org/) (supported by CNCF) has been doing a fantastic job here for over 10 years. They now support Organizations and there's work to be done still, but the path is there for true open source auth support. (Thanks Keycloak maintainers and CNCF!)
 
 Are there others here? I have only come across Keycloak which truly is an incredible effort.
 
