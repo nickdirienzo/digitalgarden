@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/typed-integration-testing-with-ts-rest-supertest-and-express/"}
+{"dg-publish":true,"permalink":"/typed-integration-testing-with-ts-rest-supertest-and-express/","created":"2025-05-17T18:27:15.937-07:00","updated":"2025-05-28T22:12:00.960-07:00"}
 ---
 
 We've been happily using `ts-rest` at Mirage Security for about a year now. There's more to be written about why we went with `ts-rest` and how we use it to efficiently build features. This is about testing with it because I couldn't find any clear guides on how to test `ts-rest` and there's an unanswered [question in Discord](https://discord.com/channels/1055855205960392724/1055857825831731200/1259172105677836298) so here's how we approached it.

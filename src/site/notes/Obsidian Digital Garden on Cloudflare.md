@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/obsidian-digital-garden-on-cloudflare/"}
+{"dg-publish":true,"permalink":"/obsidian-digital-garden-on-cloudflare/","created":"2025-05-17T13:40:31.061-07:00","updated":"2025-05-17T19:15:58.398-07:00"}
 ---
 
 I'm using the [Obsidian Digital Garden Plugin](https://dg-docs.ole.dev) for my [[Digital Gardening\|Digital Gardening]]. While I haven't used Obsidian Publish, it's reduced my barrier to publishing on the internet. Write some thoughts down, tag it as `dg-publish: true`, `cmd+p` Publish, done.
