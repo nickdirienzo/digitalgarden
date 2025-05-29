@@ -22,19 +22,19 @@ Companies like WorkOS and Auth0/Okta are clear that you're locked into cloud pri
 
 ## How have we not solved auth already?
 
-Getting authentication right is a core part of every business. You can (and probably should) outsource it -- it's not your core competency. Instead of betting your core infrastructure on a startup pretending to be open source, you can bet on something battle-tested for the last decade that truly is open source.
+Getting authentication right is a core part of every business. You can (and probably should) outsource it -- it's not your core competency. Instead of betting your core infrastructure on a startup pretending to be open source, you can bet on something battle-tested that is truly open source.
 
  [Keycloak](https://www.keycloak.org/) (supported by CNCF) has been doing a fantastic job here for over 10 years. They now support [Organizations](https://github.com/keycloak/keycloak/issues/30180) and there's work to be done still, but the path is there for true open source B2B auth support. Thanks Keycloak maintainers and CNCF for doing the hard work.
 
 There's a whole [ecosystem of plugins](https://www.keycloak.org/extensions) which gives a chance for companies to contribute back openly so everyone can benefit. Originally organizations were supported by one of these extensions and now it's becoming a part of the core functionality. This is a win for Keycloak and a win for the software industry.
 
+Auth feels like it should be solved territory by now. Logging in with Google or Microsoft Entra are standard OAuth2 flows. A ton of companies have standardized around Okta for SSO. And supporting SSO is achievable through a number of open source projects like Keycloak, [passport-saml](https://www.passportjs.org/packages/passport-saml/), [django-saml2-auth](https://github.com/grafana/django-saml2-auth), and others.
+
 ## Where do we go from here?
 
-It's frustrating seeing a core piece of infrastructure be touted as open source but actually not be. I really wish we would stop this practice for lead gen.
+It's frustrating seeing a core piece of infrastructure be touted as open source when the "open" part is just lead gen.
 
-For identity management, some of this is getting easier because major identity platforms are providing APIs for directory syncing: Microsoft's Graph API is finally good and Google Workspace has APIs for users. 
-
-For auth, login with Google and Entra are effectively standard OAuth2. A number of companies have consolidated around Okta for SSO. And SSO has never been easier to implement ([passport-saml](https://www.passportjs.org/packages/passport-saml/), [django-saml2-auth](https://github.com/grafana/django-saml2-auth), etc).
+With auth being easier, the next hurdle is around identity management. That's getting easier too: Microsoft's Graph API is actually really good and Google Workspace has APIs for users.
 
 There are so many companies out there that rely on Microsoft or Google. I don't think you need some middleware open-core SaaS vendor in the middle anymore. You can just directly integrate with the identity platforms. 
 
