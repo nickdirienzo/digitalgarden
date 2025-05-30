@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/please-stop-calling-your-auth-startup-open-source/","created":"2025-05-28T19:33:21.444-07:00","updated":"2025-05-30T07:30:05.156-07:00"}
+{"dg-publish":true,"permalink":"/please-stop-calling-your-auth-startup-open-source/","created":"2025-05-28T19:33:21.444-07:00","updated":"2025-05-30T07:36:40.692-07:00"}
 ---
 
 I saw yet another Show HN for "open source B2B SaaS auth-in-a-box" today. It feels like the 4th time in the last year. The pitch is always the same: here's everything you need to authenticate in the enterprise, all on GitHub. Except it's not *all* on GitHub.
@@ -14,7 +14,7 @@ I wish I were making this up. Here are some pricing pages for some up and coming
 
 [Tesseral](https://github.com/tesseral-labs/tesseral): you can't even run on your own domain for < $250/mo.![Pasted image 20250528194401.png](/img/user/Pasted%20image%2020250528194401.png)
 [SuperTokens](https://supertokens.com/): multi-tenancy doesn't even come in the free self-hosted version so I suppose you can only support one customer at a time.![Pasted image 20250528194347.png](/img/user/Pasted%20image%2020250528194347.png)
-~~[BoxyHQ](https://boxyhq.com): you have to pay to customize branding on something you host yourself.~~ Turns out Boxy was acquired by Ory (congrats team Boxy!) a day after I wrote this, so I'm dropping from this list. 
+~~[BoxyHQ](https://boxyhq.com): you have to pay to customize branding on something you host yourself.~~ Turns out [Boxy was acquired by Ory](https://www.ory.sh/blog/introducing-ory-polis-for-enterprise-single-sign-on) (congrats team Boxy!) a day after I wrote this, so I'm dropping from this list. 
 
 Ory’s been doing great work here for a long time. But they did raise a $22M Series A in 2022 (congrats team Ory!) so we'll see how things play out over time. Candidly, I haven't been keeping too close an eye on them but I've only ever heard good things.
 
