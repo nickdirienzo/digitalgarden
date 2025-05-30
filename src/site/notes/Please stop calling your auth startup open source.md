@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/please-stop-calling-your-auth-startup-open-source/","created":"2025-05-28T19:33:21.444-07:00","updated":"2025-05-28T22:05:38.885-07:00"}
+{"dg-publish":true,"permalink":"/please-stop-calling-your-auth-startup-open-source/","created":"2025-05-28T19:33:21.444-07:00","updated":"2025-05-30T07:30:05.156-07:00"}
 ---
 
 I saw yet another Show HN for "open source B2B SaaS auth-in-a-box" today. It feels like the 4th time in the last year. The pitch is always the same: here's everything you need to authenticate in the enterprise, all on GitHub. Except it's not *all* on GitHub.
@@ -14,9 +14,9 @@ I wish I were making this up. Here are some pricing pages for some up and coming
 
 [Tesseral](https://github.com/tesseral-labs/tesseral): you can't even run on your own domain for < $250/mo.![Pasted image 20250528194401.png](/img/user/Pasted%20image%2020250528194401.png)
 [SuperTokens](https://supertokens.com/): multi-tenancy doesn't even come in the free self-hosted version so I suppose you can only support one customer at a time.![Pasted image 20250528194347.png](/img/user/Pasted%20image%2020250528194347.png)
-[BoxyHQ](https://boxyhq.com): you have to pay to customize branding on something you host yourself.![Pasted image 20250528194528.png](/img/user/Pasted%20image%2020250528194528.png)
+~~[BoxyHQ](https://boxyhq.com): you have to pay to customize branding on something you host yourself.~~ Turns out Boxy was acquired by Ory (congrats team Boxy!) a day after I wrote this, so I'm dropping from this list. 
 
-Ory’s been doing great work here for a long time. But they did raise a $22M Series A in 2022 (congrats team Ory!) so we'll see how things play out over time. Candidly, I haven't been paying too close an eye on them but I've only ever heard good things.
+Ory’s been doing great work here for a long time. But they did raise a $22M Series A in 2022 (congrats team Ory!) so we'll see how things play out over time. Candidly, I haven't been keeping too close an eye on them but I've only ever heard good things.
 
 Companies like WorkOS and Auth0/Okta are clear that you're locked into cloud pricing. At least they're not pretending to be an open source project. You are paying for a company to manage auth for you -- and that's fine. You know what you're buying that lock-in so you can focus on your product.
 
@@ -34,8 +34,8 @@ Auth feels like it should be solved territory by now. Logging in with Google or 
 
 It's frustrating seeing a core piece of infrastructure be touted as open source when the "open" part is just lead gen.
 
-With auth being easier, the next hurdle is around identity management. That's getting easier too: Microsoft's Graph API is actually really good and Google Workspace has APIs for users.
+With auth being easier, the next hurdle is around identity management. That's getting easier too: Microsoft's Graph API is actually really good and Google Workspace has APIs for users. And for everything that's not Microsoft or Google there is SCIM.
 
-There are so many companies out there that rely on Microsoft or Google. I don't think you need some middleware open-core SaaS vendor in the middle anymore. You can just directly integrate with the identity platforms. 
+There are so many companies out there that rely on Microsoft or Google. I don't think you need some open-core SaaS vendor in the middle anymore. You can just directly integrate with the identity platforms. 
 
 Hopefully we can stop rebuilding auth every year as a new startup and instead invest in solutions that are truly open, sustainable and portable. 
