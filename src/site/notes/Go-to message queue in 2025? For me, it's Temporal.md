@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/go-to-message-queue-in-2025-for-me-it-s-temporal/","created":"2025-06-04T13:23:20.233-07:00","updated":"2025-06-04T15:27:04.701-07:00"}
+{"dg-publish":true,"permalink":"/go-to-message-queue-in-2025-for-me-it-s-temporal/","created":"2025-06-04T13:23:20.233-07:00","updated":"2025-06-04T15:29:42.043-07:00"}
 ---
 
 Sadly I don't have a lobste.rs account so I can't answer [the question](https://lobste.rs/s/uwp2hd/what_s_your_go_message_queue_2025) there, but I had some thoughts and wanted to share.
@@ -16,5 +16,6 @@ The one major trade-off here is vendor lock-in. Once you start building with Tem
 
 Still, for business logic, it's hard to beat what Temporal provides. Message queues feel like writing C in a world where you can just write TypeScript.
 
-**Aside:**
->I know this probably sounds like I’m shilling for a company -- and I guess I am. But it’s been a long time since I’ve used a developer product that genuinely changes the way I build software and I want more people to know about it.
+> [!note] Aside
+> I know this probably sounds like I’m shilling for a company -- and I guess I am. But it’s been a long time since I’ve used a developer product that genuinely changes the way I build software and I want more people to know about it.
+
