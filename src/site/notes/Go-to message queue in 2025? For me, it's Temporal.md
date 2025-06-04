@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/go-to-message-queue-in-2025-for-me-it-s-temporal/","created":"2025-06-04T13:23:20.233-07:00","updated":"2025-06-04T13:45:05.134-07:00"}
+{"dg-publish":true,"permalink":"/go-to-message-queue-in-2025-for-me-it-s-temporal/","created":"2025-06-04T13:23:20.233-07:00","updated":"2025-06-04T15:23:32.715-07:00"}
 ---
 
-Sadly I don't have a lobste.rs account so I can't answer [the question](https://lobste.rs/s/uwp2hd/what_s_your_go_message_queue_2025) there, but I had these thoughts and wanted to share them.
+Sadly I don't have a lobste.rs account so I can't answer [the question](https://lobste.rs/s/uwp2hd/what_s_your_go_message_queue_2025) there, but I had some thoughts and wanted to share.
 
-In 2025, I think most companies don't need a message queue. Message queues still have their place -- like with edge ingestion or buffering -- but I'm not sure I would reach for them for codifying business logic knowing systems like Temporal exist. 
+In 2025, I think most companies _don't_ need a message queue. Message queues still have their place -- like with edge ingestion or buffering -- but I'm not sure I would reach for them for codifying business logic knowing systems like Temporal exist. 
 
 I've been building with Temporal for over a year now in production, so maybe I drank too much durable execution Kool-Aid. 
 
