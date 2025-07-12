@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/how-do-i-have-473-gb-of-used-disk-space/","created":"2025-07-12T06:30:34.981-07:00","updated":"2025-07-12T07:34:48.054-07:00"}
+{"dg-publish":true,"permalink":"/how-do-i-have-473-gb-of-used-disk-space/","created":"2025-07-12T06:30:34.981-07:00","updated":"2025-07-12T07:37:45.521-07:00"}
 ---
 
-I was trying to run some tests today and out of nowhere (OrbStack)[Goodbye%20Docker%20Desktop%2C%20hello%20OrbStack.md] crashes so all my Docker containers are no longer reachable. 
+I was trying to run some tests today and out of nowhere [[Goodbye Docker Desktop, hello OrbStack\|OrbStack]] crashes so all my Docker containers are no longer reachable. 
 
 I see OrbStack bouncing in the dock. After trying to start containers up again, I get this lovely error:
 
