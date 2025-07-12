@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/generating-phone-numbers-with-faker-js-and-libphonenumber-js/","created":"2025-05-22T20:47:24.161-07:00","updated":"2025-05-22T21:13:30.857-07:00"}
+{"dg-publish":true,"permalink":"/generating-phone-numbers-with-faker-js-and-libphonenumber-js/","created":"2025-05-22T20:47:24.161-07:00","updated":"2025-07-12T07:42:43.717-07:00"}
 ---
 
-One of [[Mirage Security \| our interview questions]] is around formatting phone numbers. If you've worked around telephony at all, you know that this is not straightforward. 
+One of the interview questions I use for Mirage is around formatting phone numbers. If you've worked around telephony at all, you know that this is not straightforward. 
 
 For us, this problem is challenging because we sync enterprise directory data where formats are all over the place, country codes may or may not exist, and there might be nested numbers where one has preference.
 
