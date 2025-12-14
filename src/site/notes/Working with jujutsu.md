@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T22:03:22.366-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T22:19:34.629-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with `jj`
@@ -23,6 +23,16 @@ Second learning: `jj` is always operating on a commit for _everything_.  I accid
 jj squash --from wut --to yzox
 ```
 
-But this is saying take commit `wut` and teleport it into `yzox`. I thought it meant from `wut` to `yzox` create a new commit and squash them into that. Nope.
+But this is saying take revision `wut` and teleport it into `yzox`. I thought it meant from `wut` to `yzox` create a new revision and squash them into that. Nope.
 
-But because everything is a commit. I can easily just run `jj undo` and fix my oops.
+But because everything is a revision. I can easily just run `jj undo` and fix my oopsie.
+
+Third learning: `jj` effortlessly manages stacked PRs. Let's say I realize I need to make a change to PR-A while working in PR-D. I can easily do `jj edit PR-A`, make the change, and it will auto-propagate the changes forward across the stack. Then when I push, all of those branches get pushed (effectively auto-rebased with their respective parent and pushed).
+
+While doing my own cleanup and transition from `git` to `jj`, I found a revision in PR-D that really should be in PR-B. Now I can take my oopsie command from earlier and actually use it appropriately. I want to take revision `qplwptqv` and bring it to `wutnoxrs`; that can be done with:
+
+```bash
+jj squash --from qplwptqv --to wutnoxrs
+```
+
+And this applies that revision to the other one. This would have been so, so painful in `git` because I would have had to cherry-pick that commit into PR-B, drop it in PR-D, and then rebase PR-C and PR-D onto the latest PR-B. `jj` just did all of that for me.
