@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T22:53:39.262-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T23:02:31.260-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
@@ -28,7 +28,13 @@ jj squash --from wut --into yzox
 But this is saying take revision `wut` and teleport it into `yzox`. I thought it meant from `wut` to `yzox` create a new revision and squash them into that. Nope.
 
 But because everything is a revision. I can easily just run `jj undo` and fix my oopsie.
+### Even current edits
+With `git`, you have to mentally differentiate between what is staged, dirty, untracked, and committed. With `jj`, you're never not operating on a revision:
 
+```bash
+@  omlsswzl nick 2025-12-13 22:23:52 66f2d3c2
+│  (empty) (no description set)
+```
 ## Stacking PRs is so much simpler
 Third learning: `jj` effortlessly manages stacked PRs. Let's say I realize I need to make a change to PR-A while working in PR-D. I can easily do `jj edit PR-A`, make the change, and it will auto-propagate the changes forward across the stack. Then when I push, all of those branches get pushed (effectively auto-rebased with their respective parent and pushed).
 
