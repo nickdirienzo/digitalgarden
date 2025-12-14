@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T22:49:27.122-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T22:50:31.341-08:00"}
 ---
 
-Scattered, thoughts, tips and tricks working with `jj`
+Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
 
 I figured now would be a good time to try out `jj` since I am 5 PRs deep in a stack.
 
