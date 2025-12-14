@@ -1,11 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T22:50:31.341-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T22:52:50.310-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
 
 I figured now would be a good time to try out `jj` since I am 5 PRs deep in a stack.
 
+## Commit = feature
 First learning: `jj` wants you to have a mental model of commit = feature. With `git`, you would think of a PR being the feature; even if the PR was a mess, you would likely squash and commit into `main` to keep it clean.
 
 Because of this, I have to cleanup my "mess" of commits like: "yay it works", "rename", "etc". This is reasonable since I put all my effort into PR descriptions, less so individual commits.
@@ -17,6 +18,7 @@ So to take my 7 commit mess into 1 I effectively did an interactive rebase with 
 jj squash --from "wutnoxrs..yzoxlnsx" --into wutnoxrs
 ```
 
+## Everything is a revision
 Second learning: `jj` is always operating on a commit for _everything_.  I accidentally ran the previous command as:
 
 ```bash
@@ -27,6 +29,7 @@ But this is saying take revision `wut` and teleport it into `yzox`. I thought it
 
 But because everything is a revision. I can easily just run `jj undo` and fix my oopsie.
 
+## Stacking PRs is so much simpler
 Third learning: `jj` effortlessly manages stacked PRs. Let's say I realize I need to make a change to PR-A while working in PR-D. I can easily do `jj edit PR-A`, make the change, and it will auto-propagate the changes forward across the stack. Then when I push, all of those branches get pushed (effectively auto-rebased with their respective parent and pushed).
 
 While doing my own cleanup and transition from `git` to `jj`, I found a revision in PR-D that really should be in PR-B. Now I can take my oopsie command from earlier and actually use it appropriately. I want to take revision `qplwptqv` and bring it to `wutnoxrs`; that can be done with:
@@ -43,7 +46,8 @@ And this applies that revision to the other one. This would have been so, so pai
 jj git push --all
 ```
 
-This was terrifying to run, so I learned there's a dry-run mode. I'm glad I did because this would push _all_ of my local bookmarks with remote... and I have _many_. Worse yet, I learned that a number of these branches are not tracked by `jj` and wouldn't be pushed because of all the changes I made:
+###  Fixing remote tracking
+This was terrifying to run, so I learned there's a dry-run mode (`--dry-run`). I'm glad I did because this would push _all_ of my local bookmarks with remote... and I have _many_. Worse yet, I learned that a number of these branches are not tracked by `jj` and wouldn't be pushed because of all the changes I made:
 
 ```
 Warning: Non-tracking remote bookmark nvd/feature@origin exists
