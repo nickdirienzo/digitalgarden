@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T23:02:31.260-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T23:17:42.571-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
 
-I figured now would be a good time to try out `jj` since I am 5 PRs deep in a stack. As like most of everything here, this is written stream of consciousness and as I am learning / doing.
+I figured now would be a good time to try out `jj` since I am 5 PRs deep in a stack. As like most of everything here, this is written largely stream of consciousness as I am learning and doing.
 
 ## Commit = feature
 First learning: `jj` wants you to have a mental model of commit = feature. With `git`, you would think of a PR being the feature; even if the PR was a mess, you would likely squash and commit into `main` to keep it clean.
