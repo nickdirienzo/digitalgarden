@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-15T14:09:15.708-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-15T14:13:30.429-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
@@ -103,6 +103,8 @@ I would love to run `jj git push --all`, but my dry run listed 74 bookmarks it w
 Create new revision from where we are: `jj new`
 
 Create new revision off `main` (i.e. need to hotfix something): `jj new main`
+
+Instead of `git commit -m`, you would describe a revision: `jj describe`
 
 Prepare revision for PR:
 * Create the bookmark: `jj bookmark create $name` ($name will be used as a branch in git)
