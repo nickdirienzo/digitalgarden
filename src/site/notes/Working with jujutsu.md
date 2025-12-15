@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-13T23:17:42.571-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-15T14:09:15.708-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
@@ -98,3 +98,16 @@ jj git push -b nvd/feature-A \
 ```
 
 I would love to run `jj git push --all`, but my dry run listed 74 bookmarks it would push. A lot of those are very, very stale. Not only is `jj` already making more productive with stacked PRs, but it is also encouraging me to Marie Kondo these all branches from my life.
+
+## Cheatsheet
+Create new revision from where we are: `jj new`
+
+Create new revision off `main` (i.e. need to hotfix something): `jj new main`
+
+Prepare revision for PR:
+* Create the bookmark: `jj bookmark create $name` ($name will be used as a branch in git)
+* Push the change: `jj git push --bookmark $name` (throw on `--dry-run` if you want to double check); this makes sure it's tracked by `jj` on origin
+
+All done with those changes? Time for another `jj new`, which locks in those changes locally under the bookmark. 
+
+Lean into `jj new` for experiments, hotfixes, etc. Don't be afraid of having "uncommitted" changes; `jj` is managing it behind the scenes.
