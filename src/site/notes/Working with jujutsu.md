@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T11:49:38.632-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T15:32:44.653-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
@@ -115,3 +115,15 @@ All done with those changes? Time for another `jj new`, which locks in those cha
 Lean into `jj new` for experiments, hotfixes, etc. Don't be afraid of having "uncommitted" changes; `jj` is managing it behind the scenes.
 
 Looking at diffs between local and origin: `jj diff --from $bookmark$@origin`
+
+Moving files across revisions: `jj squash -i --into <revision_id>`. This lets you select which files you want to move from the current revision into the provided revision. To commit the squash, type `c`.
+
+## Aliases
+Here are some aliases I've been using to make my transition to `jj` a bit easier.
+
+This shows all of the revisions from where we are to `main`:
+
+```
+[aliases]
+stack = ["log", "-r", "trunk()..@"]
+```
