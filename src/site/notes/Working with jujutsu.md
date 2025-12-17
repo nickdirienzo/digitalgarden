@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T18:22:25.120-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T18:23:35.153-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
@@ -132,13 +132,20 @@ Here are some aliases I've been using to make my transition to `jj` a bit easier
 This shows all of the revisions from where we are to `main`:
 
 ```
+[revset-aliases]
+"immutable_heads()" = "trunk() | tags()"
+# Useful for showing my active work and rebasing their roots with main
+active = "mine() ~ ::trunk()"
+
 [aliases]
 # Show my chain of revisions on the current stack
 stack = ["log", "-r", "trunk()..@"]
 # Show only my local work that hasn't been pushed/synced
 local-wip = ["log", "-r", "mine() & (trunk()..) ~ ::remote_bookmarks(remote='origin')"]
 # "Show me all my unmerged changes"
-recent = ["log", "-r", "mine() ~ ::trunk()"]
+active = ["log", "-r", "active"]
+# Rebase all of my active work with main@origin. Run after `jj git fetch`.
+sync-active = ["rebase", "-s", "roots(active)", "-d", "main@origin"]
 ```
 
 ## Cleaning up
