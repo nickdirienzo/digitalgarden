@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T17:45:39.992-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T18:02:32.717-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
@@ -133,5 +133,10 @@ This shows all of the revisions from where we are to `main`:
 
 ```
 [aliases]
+# Show my chain of revisions on the current stack
 stack = ["log", "-r", "trunk()..@"]
+# Show only my local work that hasn't been pushed/synced
+local-wip = ["log", "-r", "mine() & (trunk()..) ~ ::remote_bookmarks(remote='origin')"]
+# "Show me all my unmerged changes"
+recent = ["log", "-r", "mine() ~ ::trunk()"]
 ```
