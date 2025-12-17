@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T18:02:32.717-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T18:22:25.120-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
@@ -46,7 +46,7 @@ jj squash --from qplwptqv --into wutnoxrs
 
 And this applies that revision to the other one. This would have been so, so painful in `git` because I would have had to cherry-pick that commit into PR-B, drop it in PR-D, and then rebase PR-C and PR-D onto the latest PR-B. `jj` just did all of that for me.
 
-`jj` made it incredibly easy to take 40 commits across 5 stacked PRs and turn them into only 1 commit per PR and update everything all at once. I think this was like under 30 minutes of effort while learning how this new tool works (thanks AI). After I did all this squash surgery, it should be simple enough to push with:
+`jj` made it incredibly easy to take 40 commits across 5 stacked PRs and turn them into only 1 commit per PR and update everything all at once. I think this was like under 30 minutes of effort while learning how this new tool works (thanks Gemini). After I did all this squash surgery, it should be simple enough to push with:
 
 ```bash
 jj git push --all
@@ -140,3 +140,29 @@ local-wip = ["log", "-r", "mine() & (trunk()..) ~ ::remote_bookmarks(remote='ori
 # "Show me all my unmerged changes"
 recent = ["log", "-r", "mine() ~ ::trunk()"]
 ```
+
+## Cleaning up
+
+I have a lot of stale git branches which is making it hard to make use of `jj` rebasing efficiently with trunk, e.g. I can't quickly do `jj rebase -s "roots(active)" -d main@origin` to sync up my active work with latest `main`.
+
+I had Gemini cook up a one-liner to show me all of my work branched off trunk with context so I can decide what to abandon:
+
+```bash
+jj log -r "roots(active)" --no-graph \
+  -T 'change_id.short() ++ " " ++ author.timestamp().format("%Y-%m-%d") ++ "   " ++ description.first_line() ++ "\n"' \
+  | awk '$2 < "2025-12-10"'
+```
+
+Since that list looks good, I had it produce another one-linear to delete them:
+
+```bash
+# ONLY run this when you are ready to delete everything listed above
+jj log -r "roots(active)" --no-graph \
+  -T 'change_id.short() ++ " " ++ author.timestamp().format("%Y-%m-%d") ++ "\n"' \
+  | awk '$2 < "2025-12-10" {print $1 "::"}' \
+  | xargs jj abandon
+```
+
+It's a bit of a yolo operation, but whatever. What's great about jujutsu is if something does go wrong, I can `jj undo` the operation since the `abandon` command is taking in all the revisions at once.
+
+Once that ran and abandoned 677 commits (oops), rebasing all my active work with a new fetch of main was a breeze.
