@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T15:32:44.653-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T17:45:39.992-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
@@ -117,6 +117,14 @@ Lean into `jj new` for experiments, hotfixes, etc. Don't be afraid of having "un
 Looking at diffs between local and origin: `jj diff --from $bookmark$@origin`
 
 Moving files across revisions: `jj squash -i --into <revision_id>`. This lets you select which files you want to move from the current revision into the provided revision. To commit the squash, type `c`.
+
+Pulling `main` and rebasing revisions on top of the new changes from trunk: 
+
+```bash
+jj git fetch
+# From each base revision, rebase it on top of the new changes
+jj rebase -d main@origin
+```
 
 ## Aliases
 Here are some aliases I've been using to make my transition to `jj` a bit easier.
