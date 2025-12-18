@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-16T18:24:45.757-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-18T13:40:08.738-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
@@ -126,6 +126,7 @@ jj git fetch
 jj rebase -d main@origin
 ```
 
+Who needs bookmarks? `jj git push --change @` will take the current revision, create a bookmark, track it, and push it to origin.
 ## Aliases
 Here are some aliases I've been using to make my transition to `jj` a bit easier.
 
