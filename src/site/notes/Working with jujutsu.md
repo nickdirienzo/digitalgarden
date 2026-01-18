@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2025-12-18T13:40:08.738-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2026-01-18T08:51:20.673-08:00"}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).
@@ -7,6 +7,7 @@ Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/
 I figured now would be a good time to try out `jj` since I am 5 PRs deep in a stack. As like most of everything here, this is written largely stream of consciousness as I am learning and doing.
 
 ## Commit = feature
+
 First learning: `jj` wants you to have a mental model of commit = feature. With `git`, you would think of a PR being the feature; even if the PR was a mess, you would likely squash and commit into `main` to keep it clean.
 
 Because of this, I have to cleanup my "mess" of commits like: "yay it works", "rename", "etc". This is reasonable since I put all my effort into PR descriptions, less so individual commits.
@@ -19,7 +20,8 @@ jj squash --from "wutnoxrs..yzoxlnsx" --into wutnoxrs
 ```
 
 ## Everything is a revision
-Second learning: `jj` is always operating on a commit for _everything_.  I accidentally ran the previous command as:
+
+Second learning: `jj` is always operating on a commit for _everything_. I accidentally ran the previous command as:
 
 ```bash
 jj squash --from wut --into yzox
@@ -28,14 +30,18 @@ jj squash --from wut --into yzox
 But this is saying take revision `wut` and teleport it into `yzox`. I thought it meant from `wut` to `yzox` create a new revision and squash them into that. Nope.
 
 But because everything is a revision. I can easily just run `jj undo` and fix my oopsie.
+
 ### Even current edits
+
 With `git`, you have to mentally differentiate between what is staged, dirty, untracked, and committed. With `jj`, you're never not operating on a revision:
 
 ```bash
 @  omlsswzl nick 2025-12-13 22:23:52 66f2d3c2
 │  (empty) (no description set)
 ```
+
 ## Stacking PRs is so much simpler
+
 Third learning: `jj` effortlessly manages stacked PRs. Let's say I realize I need to make a change to PR-A while working in PR-D. I can easily do `jj edit PR-A`, make the change, and it will auto-propagate the changes forward across the stack. Then when I push, all of those branches get pushed (effectively auto-rebased with their respective parent and pushed).
 
 While doing my own cleanup and transition from `git` to `jj`, I found a revision in PR-D that really should be in PR-B. Now I can take my oopsie command from earlier and actually use it appropriately. I want to take revision `qplwptqv` and bring it to `wutnoxrs`; that can be done with:
@@ -52,7 +58,8 @@ And this applies that revision to the other one. This would have been so, so pai
 jj git push --all
 ```
 
-###  Fixing remote tracking
+### Fixing remote tracking
+
 This was terrifying to run, so I learned there's a dry-run mode (`--dry-run`). I'm glad I did because this would push _all_ of my local bookmarks with remote... and I have _many_. Worse yet, I learned that a number of these branches are not tracked by `jj` and wouldn't be pushed because of all the changes I made:
 
 ```
@@ -99,35 +106,62 @@ jj git push -b nvd/feature-A \
 
 I would love to run `jj git push --all`, but my dry run listed 74 bookmarks it would push. A lot of those are very, very stale. Not only is `jj` already making more productive with stacked PRs, but it is also encouraging me to Marie Kondo these all branches from my life.
 
-## Cheatsheet
+## New workflow
+
+TLDR:
+
+```sh
+# Fetch any updates from origin
+jj git fetch
+# Sync anything that's open (see below for my aliases)
+jj sync-all
+# Create a new revset off main
+jj new main@origin
+# Do a bunch of work
+...
+# Describe what this is about
+jj describe
+# Push to origin under a new bookmark
+jj git push --change @
+```
+
 Create new revision from where we are: `jj new`
 
-Create new revision off `main` (i.e. need to hotfix something): `jj new main`
+Create new revision off `main` (i.e. need to hotfix something or start fresh work): `jj new main@origin`
+
+I use `main@origin` instead of setting up tracking on `main` as a bookmark, and I think that's great — keeping `main` immutable means I can't accidentally edit it!
 
 Instead of `git commit -m`, you would describe a revision: `jj describe`
 
-Prepare revision for PR:
-* Create the bookmark: `jj bookmark create $name` ($name will be used as a branch in git)
-* Push the change: `jj git push --bookmark $name` (throw on `--dry-run` if you want to double check); this makes sure it's tracked by `jj` on origin
+Prepare revision for PR: `jj git push --change @`; this creates a bookmark, tracks it, and pushes to origin all in one go. No need to manually set up bookmarks.
 
-All done with those changes? Time for another `jj new`, which locks in those changes locally under the bookmark. 
+If you want to manage the bookmark name yourself:
 
-Lean into `jj new` for experiments, hotfixes, etc. Don't be afraid of having "uncommitted" changes; `jj` is managing it behind the scenes.
+- Create the bookmark: `jj bookmark create $name` ($name will be used as a branch in git)
+- Push the change: `jj git push --bookmark $name` (throw on `--dry-run` if you want to double check); this makes sure it's tracked by `jj` on origin
+
+But honestly, bookmark names matter a lot less in `jj`; less cognitive overhead for me.
+
+All done with those changes? Time for another `jj new`, which locks in those changes locally under the bookmark.
+
+Lean into `jj new` for experiments, hotfixes, etc. Don't be afraid of having "uncommitted" changes; `jj` is managing it behind the scenes. I often use `jj new` whenever I'm about to work on something new that might cause problems with my current set of changes.
 
 Looking at diffs between local and origin: `jj diff --from $bookmark$@origin`
 
 Moving files across revisions: `jj squash -i --into <revision_id>`. This lets you select which files you want to move from the current revision into the provided revision. To commit the squash, type `c`.
 
-Pulling `main` and rebasing revisions on top of the new changes from trunk: 
+Syncing with remote and rebasing revisions on top of the new changes from trunk:
 
 ```bash
 jj git fetch
-# From each base revision, rebase it on top of the new changes
-jj rebase -d main@origin
+# Sync all tracked work with the latest main
+jj sync-all
 ```
 
-Who needs bookmarks? `jj git push --change @` will take the current revision, create a bookmark, track it, and push it to origin.
+I have a collocated repo, so `jj git fetch` keeps me in sync with remote. After fetching, `jj sync-all` (a custom alias, see below) makes sure everything I'm tracking is up to date.
+
 ## Aliases
+
 Here are some aliases I've been using to make my transition to `jj` a bit easier.
 
 This shows all of the revisions from where we are to `main`:
@@ -144,7 +178,7 @@ stack = ["log", "-r", "trunk()..@"]
 # "Show me all my unmerged changes"
 active = ["log", "-r", "active"]
 # Rebase all of my active work with main@origin. Run after `jj git fetch`.
-sync-active = ["rebase", "-s", "roots(active)", "-d", "main@origin"]
+sync-all = ["rebase", "-s", "roots(active)", "-d", "main@origin"]
 ```
 
 ## Cleaning up
