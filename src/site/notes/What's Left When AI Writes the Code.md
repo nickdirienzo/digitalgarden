@@ -1,12 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/what-s-left-when-ai-writes-the-code/","created":"2026-01-24T17:27:50.127-08:00","updated":"2026-01-26T11:18:25.238-08:00"}
+{"dg-publish":true,"permalink":"/what-s-left-when-ai-writes-the-code/","created":"2026-01-24T17:27:50.127-08:00","updated":"2026-01-26T11:19:48.717-08:00"}
 ---
 
 The software engineer job is changing drastically and more quickly than people realize. But I think people have the wrong idea of what the job is in the first place: it's solving problems with software, not writing code. Code is just a means to an end, and now it's not even the time-consuming part.
 
 Recent models like Anthropic's Opus 4.5 can ship code as well as (or better than) a mid-level engineer. More importantly, it can write code that would take weeks in minutes. That allows us to learn faster, iterate faster, and ship faster. 
 
-In the last couple of months, I've written about 5-10% of code. In the last week, I didn't even open an editor and just worked through Claude Desktop Code. While that's anecdotal, I recently looked at some data of commits to main comparing pre-Claude and post-Claude. We had an 80% increase in contributions to main -- we've virtually doubled our output with agents.
+In the last couple of months, I've written about 5-10% of code. In the last week, I didn't even open an editor and just worked through Claude Desktop Code. While that's anecdotal, I recently looked at some data of commits to main comparing pre-Claude and post-Claude. We had an 80% increase in contributions to main -- almost twice the output with the same team.
 
 So what's left for us to do? At least for now, higher leverage work:
 
