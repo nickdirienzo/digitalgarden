@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/what-s-left-when-ai-writes-the-code/","created":"2026-01-24T17:27:50.127-08:00","updated":"2026-01-26T11:01:42.908-08:00"}
+{"dg-publish":true,"permalink":"/what-s-left-when-ai-writes-the-code/","created":"2026-01-24T17:27:50.127-08:00","updated":"2026-01-26T11:16:41.068-08:00"}
 ---
 
 The software engineer job is changing drastically and more quickly than people realize. But I think people have the wrong idea of what the job is in the first place: it's solving problems with software, not writing code. Code is just a means to an end, and now it's not even the time-consuming part.
@@ -12,7 +12,7 @@ So what's left for us to do? At least for now, higher leverage work:
 
 **Vision** is clarifying what you're building and why. Knowing what makes your product unique; the subtle things that differentiate you from competitors who technically do the same thing. Claude can read your docs, your ADRs, your past conversations. But it doesn't have the empathy you've built through every user conversation, every competitor you've studied, every feature you decided not to build.
 
-**Architecture** is designing sound technical systems and thinking about consequences. Claude will solve your problem, but it might overcomplicate something that should be simple, or pick an approach that doesn't scale. It's not that Claude makes bad choices; they're usually defensible. But defensible isn't always appropriate for the context you're building in.
+**Architecture** is designing sound technical systems and thinking about consequences. Claude will solve your problem, but it might overcomplicate something that should be simple, or pick an approach that doesn't meet your business where it is. It's not that Claude makes bad choices; they're usually defensible. But defensible isn't always appropriate for the context you're building in.
 
 **Taste** is the squishiest one: having conviction in whether it feels right. Depending on context, it might be about UX, developer experience, the cognitive model of your product's nouns, or some flow that just feels off. Models can produce technically-correct solutions all day. They don't have feel. Vision tells you that you need good UX. Taste tells you this UX isn't good enough.
 
