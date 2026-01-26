@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/what-s-left-when-ai-writes-the-code/","created":"2026-01-24T17:27:50.127-08:00","updated":"2026-01-26T11:17:30.950-08:00"}
+{"dg-publish":true,"permalink":"/what-s-left-when-ai-writes-the-code/","created":"2026-01-24T17:27:50.127-08:00","updated":"2026-01-26T11:18:25.238-08:00"}
 ---
 
 The software engineer job is changing drastically and more quickly than people realize. But I think people have the wrong idea of what the job is in the first place: it's solving problems with software, not writing code. Code is just a means to an end, and now it's not even the time-consuming part.
