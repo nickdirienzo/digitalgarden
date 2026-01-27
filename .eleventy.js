@@ -581,6 +581,56 @@ module.exports = function (eleventyConfig) {
       .slice(0, 5);
   });
 
+  eleventyConfig.addCollection("essays", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/site/notes/**/*.md")
+      .filter((item) => item.data.tags?.includes("essay"))
+      .sort((a, b) => {
+        const dateA = a.data.created || a.date;
+        const dateB = b.data.created || b.date;
+        return new Date(dateB) - new Date(dateA);
+      });
+  });
+
+  eleventyConfig.addCollection("tils", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/site/notes/**/*.md")
+      .filter((item) => item.data.tags?.includes("til"))
+      .sort((a, b) => {
+        const dateA = a.data.created || a.date;
+        const dateB = b.data.created || b.date;
+        return new Date(dateB) - new Date(dateA);
+      });
+  });
+
+  eleventyConfig.addCollection("talks", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/site/notes/**/*.md")
+      .filter((item) => item.data.tags?.includes("talk"))
+      .sort((a, b) => {
+        const dateA = a.data.created || a.date;
+        const dateB = b.data.created || b.date;
+        return new Date(dateB) - new Date(dateA);
+      });
+  });
+
+  eleventyConfig.addCollection("notes", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/site/notes/**/*.md")
+      .filter((item) => {
+        const tags = item.data.tags || [];
+        return !tags.includes("gardenEntry") &&
+               !tags.includes("essay") &&
+               !tags.includes("til") &&
+               !tags.includes("talk");
+      })
+      .sort((a, b) => {
+        const dateA = a.data.created || a.date;
+        const dateB = b.data.created || b.date;
+        return new Date(dateB) - new Date(dateA);
+      });
+  });
+
   userEleventySetup(eleventyConfig);
 
   return {

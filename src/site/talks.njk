@@ -1,0 +1,16 @@
+---
+permalink: /talks/
+layout: layouts/collection.njk
+title: Talks
+---
+
+<ul class="collection-list">
+{% for item in collections.talks %}
+  <li>
+    <a href="{{ item.url }}" class="internal-link">{{ item.data.title or item.fileSlug }}</a>
+    <span class="note-date">{{ (item.data.created or item.date) | readableDate }}</span>
+  </li>
+{% else %}
+  <li class="empty-message">No talks yet.</li>
+{% endfor %}
+</ul>

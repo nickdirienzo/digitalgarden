@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ meta.mainLanguage }}">
+  <head>
+    <title>{% if title %}{{ title }}{% else %}{{ page.fileSlug }}{% endif %}</title>
+    {%include "components/pageheader.njk"%}
+    {% for imp in dynamics.common.head %}
+      {% include imp %}
+    {% endfor %}
+  </head>
+  <body class="theme-{{meta.baseTheme}} markdown-preview-view markdown-rendered markdown-preview-section {{meta.bodyClasses}}">
+    {%include "components/notegrowthhistory.njk"%}
+    {%include "components/navbar.njk"%}
+    {%include "components/searchContainer.njk"%}
+    <main class="content cm-s-obsidian {{contentClasses}}">
+      <header>
+        <h1>{{ title }}</h1>
+      </header>
+      {{ content | safe }}
+    </main>
+    {% for imp in dynamics.common.footer %}
+      {% include imp %}
+    {% endfor %}
+    {%include "components/lucideIcons.njk"%}
+  </body>
+</html>
