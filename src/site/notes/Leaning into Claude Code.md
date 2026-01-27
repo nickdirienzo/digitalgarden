@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/leaning-into-claude-code/","created":"2026-01-27T12:35:28.878-08:00","updated":"2026-01-27T12:54:02.894-08:00"}
+{"dg-publish":true,"permalink":"/leaning-into-claude-code/","created":"2026-01-27T12:35:28.878-08:00","updated":"2026-01-27T12:55:49.049-08:00"}
 ---
 
 I've had a couple of friends ask how I used Claude Code, so figured to write it down here.
@@ -23,4 +23,6 @@ With this workflow, I started to see a natural progression from 3 -> 5 -> 7 CC t
 
 For fun, I tried to not open my editor for a week and was largely successful. I would review the plans in chat -- which Claude Desktop makes it less painful visually. I would have it put up a PR, Claude Code would review the PR, I would then have Claude Code iterate on the changes. I would do a pass on the change and leave comments on the PR, which then I would tell CC to review and fix. This worked. 
 
-I think there's a better workflow here that I'm tinkering with, but just moving up to the high-level alone -- even with all the road bumps in the current iteration of UX -- has enabled me to effectively double my output.
+With this level of work in parallel, I find myself bombarded with notifications. I haven't fully adopted full YOLO mode because I've seen CC regress into using `sed` instead of `Edit`/`Write` so it hasn't earned that level of trust yet. BUT, I think that's solvable.
+
+I think there's a more autonomous workflow here that I'm [tinkering with](https://github.com/nickdirienzo/inc), but just moving up to the high-level alone -- even with all the road bumps in the current iteration of UX -- has enabled me to effectively double my output.
