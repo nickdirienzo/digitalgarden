@@ -1,12 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/leaning-into-claude-code/","created":"2026-01-27T12:35:28.878-08:00","updated":"2026-01-27T12:55:49.049-08:00"}
+{"dg-publish":true,"permalink":"/leaning-into-claude-code/","created":"2026-01-27T12:35:28.878-08:00","updated":"2026-01-27T12:56:35.566-08:00"}
 ---
 
 I've had a couple of friends ask how I used Claude Code, so figured to write it down here.
-## Posts that shaped my workflow
-* https://x.com/bcherny/status/2007179832300581177
-* https://www.geoffreychallen.com/talks/2026-01-15-a-day-with-claude-using-and-teaching-coding-agents
-## My personal progression
+
+---
+
 At least at the moment, I view it as a skill on its own. Being able to stay on top of 7+ concurrent workstreams that are pretty different while still maintaining taste is tough. The current tooling doesn't make it much easier.
 
 When I first started using Claude Code more seriously (July 2025), I was mostly just using Claude Code one at a time. I was tinking about features in smaller incremental blocks instead of a larger milestone. When I first started, I was still in the prior mindset, so I would be pretty hands-on, I wasn't really doing planning, it was a lot of prompting but in the way I would delegate work to an engineer. 
@@ -26,3 +25,9 @@ For fun, I tried to not open my editor for a week and was largely successful. I 
 With this level of work in parallel, I find myself bombarded with notifications. I haven't fully adopted full YOLO mode because I've seen CC regress into using `sed` instead of `Edit`/`Write` so it hasn't earned that level of trust yet. BUT, I think that's solvable.
 
 I think there's a more autonomous workflow here that I'm [tinkering with](https://github.com/nickdirienzo/inc), but just moving up to the high-level alone -- even with all the road bumps in the current iteration of UX -- has enabled me to effectively double my output.
+
+---
+## Relevant links
+* https://x.com/bcherny/status/2007179832300581177
+* https://www.geoffreychallen.com/talks/2026-01-15-a-day-with-claude-using-and-teaching-coding-agents
+* https://x.com/karpathy/status/2015883857489522876
