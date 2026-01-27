@@ -292,7 +292,8 @@ module.exports = function (eleventyConfig) {
         if (p1.indexOf("],[") > -1 || p1.indexOf('"$"') > -1) {
           return match;
         }
-        const [fileLink, linkTitle] = p1.split("|");
+        const [rawFileLink, linkTitle] = p1.split("|");
+        const fileLink = rawFileLink.replace(/\s*\\$/, "").trim();
 
         return getAnchorLink(fileLink, linkTitle);
       })
