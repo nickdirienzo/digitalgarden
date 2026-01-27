@@ -274,6 +274,16 @@ module.exports = function (eleventyConfig) {
     return date && date.toISOString();
   });
 
+  eleventyConfig.addFilter("readableDate", function (date) {
+    if (!date) return "";
+    const d = new Date(date);
+    return d.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  });
+
   eleventyConfig.addFilter("link", function (str) {
     return (
       str &&
@@ -557,6 +567,18 @@ module.exports = function (eleventyConfig) {
       closingSingleTag: "slash",
       singleTags: ["link"],
     },
+  });
+
+  eleventyConfig.addCollection("recentNotes", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/site/notes/**/*.md")
+      .filter((item) => !item.data.tags?.includes("gardenEntry"))
+      .sort((a, b) => {
+        const dateA = a.data.updated || a.data.created || a.date;
+        const dateB = b.data.updated || b.data.created || b.date;
+        return new Date(dateB) - new Date(dateA);
+      })
+      .slice(0, 5);
   });
 
   userEleventySetup(eleventyConfig);

@@ -10,4 +10,41 @@ body {
     //  h1 {
     //   color: black;
     //  }
+
+    .recent-notes {
+        margin-top: 2rem;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .recent-notes-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid var(--background-modifier-border);
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                a {
+                    flex: 1;
+                }
+
+                .note-date {
+                    color: var(--text-muted);
+                    font-size: 0.85em;
+                    margin-left: 1rem;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
 }
