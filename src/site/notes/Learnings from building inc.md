@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/learnings-from-building-inc/","created":"2026-01-25T12:18:29.562-08:00","updated":"2026-01-26T22:13:08.531-08:00"}
+{"dg-publish":true,"permalink":"/learnings-from-building-inc/","created":"2026-01-25T12:18:29.562-08:00","updated":"2026-01-26T22:14:38.184-08:00"}
 ---
 
 I'm experimenting with agent orchestration on top of Claude Code. It's inspired a lot by gastown and others, but it's my own personal take on it. It's called [inc](https://github.com/nickdirienzo/inc).
 
-More to write about this, but the short thesis is: because agents don't have human ramp up costs, we can invert Conway's Law -- the "org structure" mirrors the problem structure, instead of the architecture mirror the org structure.
+More to write about this, but the short thesis is: because agents don't have human ramp up costs, we can break free of Conway's Law -- the "org structure" (ephemeral virtual teams) mirrors the problem structure, instead of the architecture mirroring the org structure.
 
 * Restricting access to files is kind-of hard today with Claude Code within a spawned directory. Yes you can restrict Edit/Write, but if the agent has Bash, all bets are off. Fortunately, it seems like it will only have access to files within its spawned directory, but there's a need for improved filesystem sandboxing.
 * I'm not sure if a TUI is the way, but it's kinda neat. 
