@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/please-stop-calling-your-auth-startup-open-source/","created":"2025-05-28T19:33:21.444-07:00","updated":"2025-05-30T07:36:40.692-07:00"}
+{"dg-publish":true,"permalink":"/please-stop-calling-your-auth-startup-open-source/","tags":["essay"],"created":"2025-05-28T19:33:21.444-07:00","updated":"2026-01-26T21:58:20.142-08:00"}
 ---
 
 I saw yet another Show HN for "open source B2B SaaS auth-in-a-box" today. It feels like the 4th time in the last year. The pitch is always the same: here's everything you need to authenticate in the enterprise, all on GitHub. Except it's not *all* on GitHub.

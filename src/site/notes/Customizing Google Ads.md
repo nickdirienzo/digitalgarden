@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/customizing-google-ads/","created":"2026-01-25T15:03:16.784-08:00","updated":"2026-01-25T15:06:47.777-08:00"}
+{"dg-publish":true,"permalink":"/customizing-google-ads/","tags":["til"],"created":"2026-01-25T15:03:16.784-08:00","updated":"2026-01-26T21:59:33.451-08:00"}
 ---
 
 TIL about https://myadcenter.google.com/customize

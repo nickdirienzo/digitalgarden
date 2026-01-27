@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/go-to-message-queue-in-2025-for-me-it-s-temporal/","created":"2025-06-04T13:23:20.233-07:00","updated":"2025-06-04T15:30:04.942-07:00"}
+{"dg-publish":true,"permalink":"/go-to-message-queue-in-2025-for-me-it-s-temporal/","tags":["essay"],"created":"2025-06-04T13:23:20.233-07:00","updated":"2026-01-26T21:59:14.107-08:00"}
 ---
 
 Sadly I don't have a lobste.rs account so I can't answer [the question](https://lobste.rs/s/uwp2hd/what_s_your_go_message_queue_2025) there, but I had some thoughts and wanted to share.
