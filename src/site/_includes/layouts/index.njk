@@ -53,6 +53,21 @@
         {% include imp %}
       {% endfor %}
       {{ content | hideDataview | taggify | link | safe}}
+
+      {% if collections.recentNotes.length > 0 %}
+      <section class="recent-notes">
+        <h2>Recent Notes</h2>
+        <ul class="recent-notes-list">
+          {% for note in collections.recentNotes %}
+          <li>
+            <a href="{{ note.url }}" class="internal-link">{{ note.data.title or note.fileSlug }}</a>
+            <span class="note-date">{{ (note.data.updated or note.data.created or note.date) | readableDate }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
       {% for imp in dynamics.common.afterContent %}
         {% include imp %}
       {% endfor %}
