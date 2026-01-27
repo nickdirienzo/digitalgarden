@@ -87,7 +87,7 @@
         <section class="home-collection">
           <h2><a href="/notes/">Notes</a></h2>
           <ul class="collection-list">
-            {% for note in collections.notes %}{% if loop.index <= 3 %}
+            {% for note in collections.notes %}{% if loop.index <= 5 %}
             <li>
               <a href="{{ note.url }}" class="internal-link">{{ note.data.title or note.fileSlug }}</a>
               <span class="note-date">{{ (note.data.created or note.date) | readableDate }}</span>
