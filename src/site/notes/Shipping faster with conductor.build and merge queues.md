@@ -1,12 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/shipping-faster-with-conductor-build-and-merge-queues/","created":"2026-02-11T20:24:21.136-08:00","updated":"2026-02-11T20:37:12.841-08:00"}
+{"dg-publish":true,"permalink":"/shipping-faster-with-conductor-build-and-merge-queues/","created":"2026-02-11T20:24:21.136-08:00","updated":"2026-02-11T20:39:58.711-08:00"}
 ---
 
 I feel like I hit a new level of productivity this week due to some changes in my tooling.
 
 **conductor.build**
 
-I wanted a better frontend for Claude Code (partially why I was building [inc](https://github.com/nickdirienzo/inc), but that's more of a software factory experiment). I found that this week in [Conductor](https://www.conductor.build/). I can't believe how much I've shilled this product already:
+I wanted a better frontend for Claude Code (partially why I was building [inc](https://github.com/nickdirienzo/inc), but that's more of a software factory experiment). I found that this week in [Conductor](https://www.conductor.build/). Within a day I was already telling a ton of friends about it:
 
 ![Pasted image 20260211203710.png](/img/user/Pasted%20image%2020260211203710.png)
 
