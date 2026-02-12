@@ -1,12 +1,14 @@
 ---
-{"dg-publish":true,"permalink":"/shipping-faster-with-conductor-build-and-merge-queues/","created":"2026-02-11T20:24:21.136-08:00","updated":"2026-02-11T20:35:23.634-08:00"}
+{"dg-publish":true,"permalink":"/shipping-faster-with-conductor-build-and-merge-queues/","created":"2026-02-11T20:24:21.136-08:00","updated":"2026-02-11T20:37:12.841-08:00"}
 ---
 
 I feel like I hit a new level of productivity this week due to some changes in my tooling.
 
 **conductor.build**
 
-I wanted a better frontend for Claude Code (partially why I was building [inc](https://github.com/nickdirienzo/inc), but that's more of a software factory experiment). I found that this week in [Conductor](https://www.conductor.build/). I shared with multiple friends after an hour of use: "it feels like I'm flying." 
+I wanted a better frontend for Claude Code (partially why I was building [inc](https://github.com/nickdirienzo/inc), but that's more of a software factory experiment). I found that this week in [Conductor](https://www.conductor.build/). I can't believe how much I've shilled this product already:
+
+![Pasted image 20260211203710.png](/img/user/Pasted%20image%2020260211203710.png)
 
 Today I had about 10 workspaces open, each with multiple tabs; it's a native Mac app so it doesn't suffer from the same performance problems that I get with Claude Desktop -- but with my usage, I've found it too sometimes be sluggish.
 
