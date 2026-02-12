@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/shipping-faster-with-conductor-build-and-merge-queues/","created":"2026-02-11T20:24:21.136-08:00","updated":"2026-02-11T20:39:58.711-08:00"}
+{"dg-publish":true,"permalink":"/shipping-faster-with-conductor-build-and-merge-queues/","created":"2026-02-11T20:24:21.136-08:00","updated":"2026-02-11T20:42:27.681-08:00"}
 ---
 
 I feel like I hit a new level of productivity this week due to some changes in my tooling.
@@ -14,6 +14,8 @@ Today I had about 10 workspaces open, each with multiple tabs; it's a native Mac
 
 **Merge Queues**
 
-I've been meaning to set these up for months. Auto-merging is such an immediate payoff. And Claude Code makes it a breeze to migrate our apparently 46 GHA jobs over to use merge queues. Our Conductor usage in the last 48 hours has made it an obvious need.
+I've been meaning to set these up for months as we've been shipping at an increasing rate with Claude Code, but our Conductor usage in the last 48 hours has made it an obvious need.
+
+Auto-merging is such an immediate payoff. Claude Code makes it a breeze to migrate our apparently 46 GHA jobs over to use merge queues. 
 
 I do find it very ridiculous that this is behind the Enterprise tier on GitHub. Yes, I could explore Graphite, GitLab, and any other alternative, but I don't see a need in shifting the platform we use... yet. With GitHub's continuing outages though, I won't say it hasn't crossed my mind.
