@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/leaning-into-claude-code/","created":"2026-01-27T12:35:28.878-08:00","updated":"2026-01-27T13:02:33.708-08:00"}
+{"dg-publish":true,"permalink":"/leaning-into-claude-code/","created":"2026-01-27T12:35:28.878-08:00","updated":"2026-01-27T13:05:40.348-08:00"}
 ---
 
 I've had a couple of friends ask how I use Claude Code, so figured to write it down here.
