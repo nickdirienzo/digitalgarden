@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/shipping-faster-with-conductor-build-and-merge-queues/","created":"2026-02-11T20:24:21.136-08:00","updated":"2026-02-11T20:44:31.094-08:00"}
+{"dg-publish":true,"permalink":"/shipping-faster-with-conductor-build-and-merge-queues/","created":"2026-02-11T20:24:21.136-08:00","updated":"2026-02-11T20:44:42.540-08:00"}
 ---
 
 I feel like I hit a new level of productivity this week due to some changes in my tooling.
@@ -12,7 +12,7 @@ I wanted a better frontend for Claude Code (partially why I was building [inc](h
 
 Today I had about 10 workspaces open, each with multiple tabs; it's a native Mac app so it doesn't suffer from the same performance problems that I get with Claude Desktop -- but with my usage, I've found it too sometimes be sluggish.
 
-While I've largely stopped using VS Code, I still go to GitHub for PR review, status check resolution, and releases. It's very possible that Conductor could be my entire command center for shipping; they already have built-in check failure resolution and merging, so I fully expect them to continue to obviate the need to go anywhere else. Excited to see where they take it.
+- [ ] While I've largely stopped using VS Code, I still go to GitHub for PR review, status check resolution, and releases. It's very possible that Conductor could be my entire command center for shipping; they already have built-in check failure resolution and merging, so I fully expect them to continue to obviate the need to go anywhere else. Excited to see where they take it.
 
 **Merge Queues**
 
