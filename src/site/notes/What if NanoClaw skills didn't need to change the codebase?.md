@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:18:55.287-08:00"}
+{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:19:35.372-08:00"}
 ---
 
 I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model) this morning by the creator of NanoClaw ([Gavriel Cohen](https://x.com/Gavriel_Cohen)). I generally agree with this take: we shouldn't provide secrets as inputs into LLMs or have them run with full permission on the filesystem (yet!).
@@ -18,7 +18,7 @@ From a patch management perspective, I'm worried too. Since every fork is person
 
 ## Why spend tokens on modifying the code?
 
-The AI-native response to this is: just let Claude Code handle it. I agree that this will work, but my question is: why are spending tokens on code modifications instead of using deterministic codemods or allowing NanoClaw to properly be a framework that supports a plugin architecture. 
+The AI-native response to this is: just let Claude Code handle it. I agree that this will work, but my question is: why are we spending tokens on code modifications instead of using deterministic codemods or allowing NanoClaw to properly be a framework that supports a plugin architecture. 
 
 Plugin architectures are not new. We've had them for decades that allows for simple interop between an application and external functionality. Think like: browser extensions, VSCode extensions, and Terraform providers.
 
