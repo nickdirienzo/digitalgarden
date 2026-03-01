@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/why-aren-t-claw-skills-just-mcp-server-install-instructions/","tags":["essay"],"created":"2026-03-01T10:32:39.820-08:00","updated":"2026-03-01T11:51:22.361-08:00"}
+{"dg-publish":true,"permalink":"/why-aren-t-claw-skills-just-mcp-server-install-instructions/","tags":["essay"],"created":"2026-03-01T10:32:39.820-08:00","updated":"2026-03-01T12:01:05.599-08:00"}
 ---
 
 I've been thinking about claws since OpenClaw released. I think we all have (e.g. [Karpathy's tweet](https://x.com/karpathy/status/2024987174077432126)).
@@ -68,7 +68,7 @@ Each approach makes different tradeoffs across the same three layers:
 | Configuration | Same SKILL.md             | Same codemod        | `skill.json` manifest                |
 | Scoping       | None                      | Container isolation | Container isolation + per-tool proxy |
 ## This is an experiment
-This is early. There's still work to do: securing the host layer, strengthening the MCP proxy, and some other ideas. It's an experiment, not a product.
+This is early. There's still work to do: securing the host layer, strengthening the MCP proxy, and some other ideas. 
 
 The install-time trust problem doesn't go away. SKILL.md runs once during setup and could instruct Claude Code to do bad things. But the blast radius is one-time versus permanent prompt injection on every agent turn. Same trust model as `npm install`.
 
