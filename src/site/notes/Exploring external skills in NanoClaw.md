@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/exploring-external-skills-in-nano-claw/","created":"2026-02-28T09:34:02.709-08:00","updated":"2026-02-28T13:43:13.996-08:00"}
+{"dg-publish":true,"permalink":"/exploring-external-skills-in-nano-claw/","created":"2026-02-28T09:34:02.709-08:00","updated":"2026-02-28T14:20:25.711-08:00"}
 ---
 
 I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model) this morning by the creator of NanoClaw ([Gavriel Cohen](https://x.com/Gavriel_Cohen)). I generally agree with this take: we shouldn't provide secrets as inputs into LLMs or have them run with full permission on the filesystem (yet!).
@@ -56,4 +56,8 @@ Containerized agents in NanoClaw are only responsible for thinking. Not for doin
 
 This means that skill contributions can't only have an inbound entrypoint script. They need to also provide an outbound handler script. Ideally we should be able to provide the containerized agent a subset of MCP capabilities and scope, i.e. don't send a message to every group, just the one you are registered to talk with.
 
-I will have to come back to this.
+Thinking on this again, the host can be an agent that can leverage MCP 
+
+### Problem 2: Global Docker container definition for agents
+
+I skipped over this while prototyping, but each skill may need its own container runtime with OS-level dependencies. Right now, there's global sprawl across all skills instead of just on a per-skill basis.
