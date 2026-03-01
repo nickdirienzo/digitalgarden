@@ -1,8 +1,8 @@
 ---
-{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:39:34.014-08:00"}
+{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T03:08:02.569-08:00"}
 ---
 
-I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model) this morning by the creator of NanoClaw ([Gavriel Cohen](https://x.com/Gavriel_Cohen)). I generally agree with this take: we shouldn't provide secrets as inputs into LLMs or have them run with full permission on the filesystem (yet!).
+I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model) this morning by the creator of NanoClaw ([Gavriel Cohen](https://x.com/Gavriel_Cohen)). I generally agree with this take: we shouldn't trust our agents and provide safety-by-default for agentic behavior.
 
 NanoClaw's approach to agentic routing is using containers for isolation as a foundational primitive. This provides hardening and guardrails that are hard to workaround. I think this is a great project and have started to use it personally in my homelab.
 
