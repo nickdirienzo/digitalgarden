@@ -1,12 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T03:08:02.569-08:00"}
+{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T03:09:39.908-08:00"}
 ---
 
 I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model) this morning by the creator of NanoClaw ([Gavriel Cohen](https://x.com/Gavriel_Cohen)). I generally agree with this take: we shouldn't trust our agents and provide safety-by-default for agentic behavior.
 
 NanoClaw's approach to agentic routing is using containers for isolation as a foundational primitive. This provides hardening and guardrails that are hard to workaround. I think this is a great project and have started to use it personally in my homelab.
 
-I left a [small comment](https://news.ycombinator.com/item?id=47196849) on the HN thread, but I think this is hard to articulate in short form. I tried, but definitely wasn't able to share my thoughts well enough, so here they are... and then some.
+I left a [small comment](https://news.ycombinator.com/item?id=47196849) on the HN thread, but I think this is hard to articulate in short form. I tried, but definitely wasn't able to share my thoughts well enough, so here they are... and some code that shows the thesis end-to-end.
 ## The problem with the current skills contribution model
 What surprises me is that despite all of the focus on security, there's still a long-term sprawl of code via the "features as skills" contribution model. These contributions aren't _just_ skills. They are instructions for Claude to modify NanoClaw's critical code paths to support the new capability. 
 
