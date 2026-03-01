@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:26:31.120-08:00"}
+{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:26:53.840-08:00"}
 ---
 
 I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model) this morning by the creator of NanoClaw ([Gavriel Cohen](https://x.com/Gavriel_Cohen)). I generally agree with this take: we shouldn't provide secrets as inputs into LLMs or have them run with full permission on the filesystem (yet!).
@@ -7,19 +7,16 @@ I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model
 NanoClaw's approach to agentic routing is using containers for isolation as a foundational primitive. This provides hardening and guardrails that are hard to workaround. I think this is a great project and have started to use it personally in my homelab.
 
 I left a [small comment](https://news.ycombinator.com/item?id=47196849) on the HN thread, but I think this is hard to articulate in short form. I tried, but definitely wasn't able to share my thoughts well enough, so here they are... and then some. I don't mean any of this as criticism of NanoClaw, but more of a thought experiment of how can we make NanoClaw the backbone of agentic personal assistants safely.
-
 ## The problem with the current skills contribution model
 What surprises me is that despite all of the focus on security, there's still a long-term sprawl of code via the "features as skills" contribution model. These contributions aren't _just_ skills. They are instructions for Claude to modify NanoClaw's critical code paths to support the new capability. 
 
 While the project says that the codebase is small enough for someone to understand in an afternoon. This will not be true for someone adding a ton of skills that have modified the critical code paths of the fork, the SQLite database shared by all capabilities, and keeping each personal fork up to date with upstream. 
 
 From a patch management perspective, I'm worried too. Since every fork is personal it means that you need to have a trusted agent watching dependencies for vulnerabilities and updating appropriately. There's no version of the skill since it's intertwined with the core codepaths of NanoClaw.
-
 ## Why spend tokens on modifying the code?
 The AI-native response to this is: just let Claude Code handle it. I agree that this will work, but my question is: why are we spending tokens on code modifications instead of using deterministic codemods or allowing NanoClaw to properly be a framework that supports a plugin architecture. 
 
 Plugin architectures are not new. We've had them for decades that allows for simple interop between an application and external functionality. Think like: browser extensions, VSCode extensions, and Terraform providers.
-
 ## Skills as config, not code
 The agent ecosystem already has a ton of "plugins" readily available with proprietary and community MCP servers. NanoClaw needs to know how to interoperate with them. 
 
@@ -40,7 +37,6 @@ It creates a new problem of: how does NanoClaw "install" a remote skill? But we 
 Could we take the ideas here and actually make it work? The criteria being: we are able to replicate the end to end onboarding workflow with WhatsApp without having WhatsApp in the codebase at all. 
 
 That would give us integration one. If that works, we can try with Gmail, and then we can try with another random skill. Ideally all of these are backed by popular or official MCP servers instead of custom code.
-
 ### Problem 1: MCP on its own is insufficient
 Containerized agents in NanoClaw are only responsible for thinking. Not for doing. Any action goes back to the host process to execute outbound messages. This means skills need to handle both inbound and outbound, not just one direction.
 
@@ -49,7 +45,6 @@ There's also an authorization gap. MCP servers expose all their tools to any cli
 I skipped over this while prototyping, but each skill may need its own container runtime with OS-level dependencies. Right now, there's global sprawl across all skills instead of just on a per-skill basis. This is still an open problem. In the current architecture, MCP servers run on the host (trusted zone) so container dependencies are less of an issue for skill-specific tooling, but it's not fully solved.
 
 I'd like to go back to this and make it so that skill MCPs run in containers. Unfortunately it seems like many MCP servers don't provide Docker images, which feels like a gap in the ecosystem. Containers are a wonderfully simple deployment artifact, even if that deployment is your own computer.
-
 ## Forking NanoClaw
 I forked NanoClaw and built [NonnaClaw](https://github.com/nickdirienzo/nonnaclaw), an experimental project that replaces the skills-as-code model with skills-as-config backed by MCP servers. The two main additions that make this work safely are an MCP bridge and a scoping proxy, both running on the host in the trusted zone.
 
@@ -58,7 +53,6 @@ The bridge (`mcp-bridge.ts`) spawns MCP servers as child processes over stdio, e
 The proxy (`mcp-proxy.ts`) sits between the agent and the bridge, enforcing per-group authorization via `scopeTemplate` (tool allowlists and parameter pinning). For example, a family group chat can only `send_message` to its own JID. The agent never sees tools it isn't authorized for. Both run in the trusted zone for the same reason inbound does: if they ran inside the container, a compromised agent could bypass its own restrictions.
 
 Everything else — container isolation, filesystem IPC, per-group CLAUDE.md memory, scheduled tasks, the Claude Agent SDK harness — is inherited from NanoClaw. 
-
 ## Putting it to the test
 I built two external skills: [nonnaclaw-whatsapp](https://github.com/nickdirienzo/nonnaclaw-whatsapp) using [verygoodplugins/whatsapp-mcp](https://github.com/verygoodplugins/whatsapp-mcp), and [nonnaclaw-github](https://github.com/nickdirienzo/nonnaclaw-github) using Docker's official GitHub MCP server. Each skill is two files: a `skill.json` and a `SKILL.md`. Similar to NanoClaw, `SKILL.md` explains how to get it integrated; `skill.json` is new to support NonnaClaw's architecture. Two MCP servers, different transports, both running through the bridge, scoped through the proxy.
 
@@ -67,7 +61,6 @@ I `/install`'ed them both. Then I sent a WhatsApp message: "Wha was the last com
 ![nonnaclaw.png](/img/user/nonnaclaw.png)
 
 After extracting skills to external packages, the code modification and channel machinery (~7,800 lines across the skills engine, Claude Code skills, and channel implementations) goes away entirely. The core stays roughly the same size — about 170 lines of net difference, with the new `mcp-bridge.ts`, `skill-registry.ts`, and `mcp-proxy.ts`. Ideally, the core now stays relatively static except for bug fixes, security patches, and runtime improvements.
-
 ## Where this goes
 NonnaClaw is an experiment. [NanoClaw is the real thing](https://github.com/qwibitai/NanoClaw). NanoClaw's insight — a personal AI assistant should be small enough to understand, secure by isolation, and customizable — is the foundation everything here builds on. 
 
