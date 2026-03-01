@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:19:35.372-08:00"}
+{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:21:01.507-08:00"}
 ---
 
 I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model) this morning by the creator of NanoClaw ([Gavriel Cohen](https://x.com/Gavriel_Cohen)). I generally agree with this take: we shouldn't provide secrets as inputs into LLMs or have them run with full permission on the filesystem (yet!).
@@ -52,7 +52,7 @@ Containerized agents in NanoClaw are only responsible for thinking. Not for doin
 
 This means that skill contributions can't only have an inbound entrypoint script. They need to also provide an outbound handler script. Ideally we should be able to provide the containerized agent a subset of MCP capabilities and scope, i.e. don't send a message to every group, just the one you are registered to talk with.
 
-Thinking on this again, the host can be an agent that can leverage MCP. And that turned out to be the unlock.
+Thinking on this again, the host layer — even as a non-agent — can leverage MCP. And that turned out to be the unlock.
 
 Instead of separate inbound and outbound handlers, the host runs an MCP bridge that spawns community MCP servers as child processes and exposes them over HTTP. A `pollTool` field in the skill manifest tells the bridge which tool to call for inbound messages and on what interval. The same MCP server that handles `list_messages` for inbound also handles `send_message` for outbound. Both directions, one server, no custom code.
 
