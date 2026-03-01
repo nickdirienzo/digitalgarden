@@ -43,7 +43,7 @@ permalink: "notes/{{ page.fileSlug | slugify }}/"
               {% endfor %}
             </div>
           {% endif %}
-          {%- if meta.timestampSettings.showCreated or meta.timestampSettings.showUpdated -%}
+          {%- if (meta.timestampSettings.showCreated or meta.timestampSettings.showUpdated) and "about" not in tags -%}
           <div class="timestamps">
             {%- if meta.timestampSettings.showCreated and created -%}
             <div><i icon-name="calendar-plus"></i> Created: <span class="human-date" data-date="{{created}}"></span></div>
