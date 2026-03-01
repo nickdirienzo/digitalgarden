@@ -573,7 +573,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("recentNotes", function (collectionApi) {
     return collectionApi
       .getFilteredByGlob("src/site/notes/**/*.md")
-      .filter((item) => !item.data.tags?.includes("gardenEntry"))
+      .filter((item) => !item.data.tags?.includes("gardenEntry") && !item.data.tags?.includes("about"))
       .sort((a, b) => {
         const dateA = a.data.updated || a.data.created || a.date;
         const dateB = b.data.updated || b.data.created || b.date;
@@ -623,7 +623,8 @@ module.exports = function (eleventyConfig) {
         return !tags.includes("gardenEntry") &&
                !tags.includes("essay") &&
                !tags.includes("til") &&
-               !tags.includes("talk");
+               !tags.includes("talk") &&
+               !tags.includes("about");
       })
       .sort((a, b) => {
         const dateA = a.data.created || a.date;
