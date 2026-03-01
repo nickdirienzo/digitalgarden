@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:28:04.801-08:00"}
+{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:29:13.503-08:00"}
 ---
 
 I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model) this morning by the creator of NanoClaw ([Gavriel Cohen](https://x.com/Gavriel_Cohen)). I generally agree with this take: we shouldn't provide secrets as inputs into LLMs or have them run with full permission on the filesystem (yet!).
@@ -60,7 +60,7 @@ I `/install`'ed them both. Then I sent a WhatsApp message: "Wha was the last com
 
 ![nonnaclaw.png](/img/user/nonnaclaw.png)
 
-After extracting skills to external packages, the code modification and channel machinery (~7,800 lines across the skills engine, Claude Code skills, and channel implementations) goes away entirely. The core stays roughly the same size — about 170 lines of net difference, with the new `mcp-bridge.ts`, `skill-registry.ts`, and `mcp-proxy.ts`. Ideally, the core now stays relatively static except for bug fixes, security patches, and runtime improvements.
+After extracting skills to external packages, the code modification and channel machinery (~7,800 lines across the skills engine, Claude Code skills, and channel implementations) goes away entirely. The core stays roughly the same size (about 170 line delta), with the new `mcp-bridge.ts`, `skill-registry.ts`, and `mcp-proxy.ts`. Ideally, the core now stays relatively static except for bug fixes, security patches, and runtime improvements.
 ## Where this goes
 NonnaClaw is an experiment. [NanoClaw is the real thing](https://github.com/qwibitai/NanoClaw). NanoClaw's insight — a personal AI assistant should be small enough to understand, secure by isolation, and customizable — is the foundation everything here builds on. 
 
