@@ -101,7 +101,9 @@ module.exports = function (eleventyConfig) {
     breaks: true,
     html: true,
     linkify: true,
-  })
+  });
+  markdownLib.linkify.tlds('.md', false);
+  markdownLib = markdownLib
     .use(require("markdown-it-anchor"), {
       slugify: headerToId,
     })
