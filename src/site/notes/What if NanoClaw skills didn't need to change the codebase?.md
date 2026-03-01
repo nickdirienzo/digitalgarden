@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:26:53.840-08:00"}
+{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","tags":["essay"],"created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T02:28:04.801-08:00"}
 ---
 
 I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model) this morning by the creator of NanoClaw ([Gavriel Cohen](https://x.com/Gavriel_Cohen)). I generally agree with this take: we shouldn't provide secrets as inputs into LLMs or have them run with full permission on the filesystem (yet!).
@@ -44,7 +44,7 @@ There's also an authorization gap. MCP servers expose all their tools to any cli
 ### Problem 2: Global Docker container definition for agents
 I skipped over this while prototyping, but each skill may need its own container runtime with OS-level dependencies. Right now, there's global sprawl across all skills instead of just on a per-skill basis. This is still an open problem. In the current architecture, MCP servers run on the host (trusted zone) so container dependencies are less of an issue for skill-specific tooling, but it's not fully solved.
 
-I'd like to go back to this and make it so that skill MCPs run in containers. Unfortunately it seems like many MCP servers don't provide Docker images, which feels like a gap in the ecosystem. Containers are a wonderfully simple deployment artifact, even if that deployment is your own computer.
+I'd like to go back to this and make it so that skill MCP servers run in containers. Unfortunately it seems like many MCP servers don't provide Docker images, which feels like a gap in the ecosystem. Containers are a wonderfully simple deployment artifact, even if that deployment is your own computer.
 ## Forking NanoClaw
 I forked NanoClaw and built [NonnaClaw](https://github.com/nickdirienzo/nonnaclaw), an experimental project that replaces the skills-as-code model with skills-as-config backed by MCP servers. The two main additions that make this work safely are an MCP bridge and a scoping proxy, both running on the host in the trusted zone.
 
