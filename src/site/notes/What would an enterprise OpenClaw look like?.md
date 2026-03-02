@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/what-would-an-enterprise-open-claw-look-like/","created":"2026-03-01T19:36:48.164-08:00","updated":"2026-03-01T20:30:28.631-08:00"}
+{"dg-publish":true,"permalink":"/what-would-an-enterprise-open-claw-look-like/","created":"2026-03-01T19:36:48.164-08:00","updated":"2026-03-01T20:34:57.017-08:00"}
 ---
 
 Clearly my brain is obsessing over the Claw ecosystem this weekend since this is the 3rd post in 48 hours about this topic. 
@@ -17,7 +17,7 @@ If I simplify Claw applications, they are primarily workflow orchestrations dres
 
 **Agent capability scoping.** Building on the above, not only do agents need to be run in isolation, each agent has a separate set of allowed tools and APIs. Because they are untrusted, they should not see credentials for tool use (see [IronCurtain](https://www.provos.org/p/ironcurtain-secure-personal-assistant/) and [NonnaClaw](https://nickdirienzo.com/why-aren-t-claw-skills-just-mcp-server-install-instructions/) for the single-user version of this). This requires some sort of explainable policy engine like OPA or Cedar; explainability matters here because when agents are doing real work on behalf of humans, customers need to audit exactly what an agent was and wasn't authorized to do. While runtime isolation prevents escape, this prevents unauthorized use.
 
-**Cloud-native IO.** Local Claws lean on the filesystem for agent work and Node polling loops for data ingestion. This local IO model breaks when you have multiple tenants on shared infrastructure. Files become per-tenant blob storage (e.g. S3). Polling loops become event-driven ingestion: instead of 500 tenants each running their own cron, a service exposes public endpoints per customer that push events into the orchestration layer or scheduled through the durable orchestration layer.
+**Cloud-native IO.** Local Claws lean on the filesystem for agent work and Node polling loops for data ingestion. This local IO model breaks when you have multiple tenants on shared infrastructure. Files become per-tenant blob storage (e.g. S3). Polling loops become event-driven ingestion: instead of 500 tenants each running their own cron, a service exposes public endpoints per customer that push events into the durable orchestration layer or are centrally scheduled in that layer in batch.
 
 **Secret management.** Claws have a massive integration surface area. These cannot be all driven by environment variables. Instead each customer will need their own secret at runtime, that only they can configure. This causes a requirement for a technology like Hashicorp Vault, OpenBao, or secrets in the database using data encryption keys from the customer key.
 
