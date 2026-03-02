@@ -67,6 +67,18 @@ body {
         }
     }
 
+    .note-footer {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--background-modifier-border);
+        color: var(--text-muted);
+        font-size: 0.9em;
+
+        a {
+            color: var(--text-accent);
+        }
+    }
+
     .home-collections {
         margin-top: 2rem;
 
