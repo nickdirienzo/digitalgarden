@@ -1,12 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/post-ideas/meditation-reflection-1-begin-again/","created":"2026-03-02T09:16:41.610-08:00","updated":"2026-03-03T11:13:40.009-08:00"}
+{"dg-publish":true,"permalink":"/post-ideas/meditation-reflection-1-begin-again/","created":"2026-03-02T09:16:41.610-08:00","updated":"2026-03-03T11:14:16.023-08:00"}
 ---
 
 I've tried to meditate off and on for the last decade. It hasn't really stuck yet, but that's not to say it will never stick. 
 
 I've been thinking a lot about spirituality this year. A friend suggested to try meditation and sent me a gift subscription to [Waking Up](). I'm fairly familiar with the mental wellness app landscape, but this is one that I never thought to try until now.
 
-One of the experiences it gets right is a slow on-ramp into the practice of meditation through their 28-day Introductory Course: exposing you to the different nuances and challenges that appear when meditating, like background sounds, restlessness, and loss of focus.
+One of the experiences it gets right is a slow on-ramp into the practice of meditation through their 28-day Introductory Course. It gracefully exposes you to the different nuances and challenges that appear when meditating, like background sounds, restlessness, and loss of focus.
 
 Early on in the course, Sam Harris introduces two ideas that have stuck with me.
 
