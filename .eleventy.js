@@ -45,7 +45,7 @@ function getAnchorAttributes(filePath, linkTitle) {
 
   let noteIcon = process.env.NOTE_ICON_DEFAULT;
   const title = linkTitle ? linkTitle : fileName;
-  let permalink = `/notes/${slugify(filePath)}`;
+  let permalink = `/${slugify(fileName)}/`;
   let deadLink = false;
   try {
     const startPath = "./src/site/notes/";
@@ -55,7 +55,9 @@ function getAnchorAttributes(filePath, linkTitle) {
     const file = fs.readFileSync(fullPath, "utf8");
     const frontMatter = matter(file);
     if (frontMatter.data.permalink) {
-      permalink = frontMatter.data.permalink;
+      // Flatten permalink — strip folder prefixes
+      const slug = frontMatter.data.permalink.replace(/^\//, "").replace(/\/$/, "").split("/").pop();
+      permalink = `/${slug}/`;
     }
     if (
       frontMatter.data.tags &&

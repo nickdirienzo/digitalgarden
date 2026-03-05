@@ -15,7 +15,13 @@ module.exports = {
       if (data.tags.indexOf("gardenEntry") != -1) {
         return "/";
       }
-      return data.permalink || undefined;
+      if (data.permalink) {
+        // Flatten permalinks — strip any folder prefixes so that
+        // e.g. "/notes/my-post/" becomes "/my-post/"
+        const slug = data.permalink.replace(/^\//, "").replace(/\/$/, "").split("/").pop();
+        return `/${slug}/`;
+      }
+      return undefined;
     },
     settings: (data) => {
       const noteSettings = {};

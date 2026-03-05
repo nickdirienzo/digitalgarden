@@ -66,7 +66,9 @@ function getPermalinkMeta(note, key) {
   let folders = null;
   try {
     if (note.data.permalink) {
-      permalink = note.data.permalink;
+      // Flatten permalink — strip folder prefixes
+      const slug = note.data.permalink.replace(/^\//, "").replace(/\/$/, "").split("/").pop();
+      permalink = `/${slug}/`;
     }
     if (note.data.tags && note.data.tags.indexOf("gardenEntry") != -1) {
       permalink = "/";
