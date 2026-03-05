@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/post-ideas/reflecting-on-harness-engineering-lessons-from-engineering-with-ai-since-2023/","created":"2026-03-05T12:53:50.049-08:00","updated":"2026-03-05T15:19:42.235-08:00"}
+{"dg-publish":true,"permalink":"/post-ideas/reflecting-on-harness-engineering-lessons-from-engineering-with-ai-since-2023/","created":"2026-03-05T12:53:50.049-08:00","updated":"2026-03-05T15:20:17.299-08:00"}
 ---
 
 I learned about [OpenAI's Symphony project](https://github.com/openai/symphony) today. It is really impressive and reminds me of the experiment I was working on in January with [inc](https://github.com/nickdirienzo/inc). Symphony and OpenAI's post on [Harness Engineering](https://openai.com/index/harness-engineering/) is making me move from the headspace of "experiment" to "how can I bring these capabilities to our daily development without a new tool."
@@ -43,7 +43,7 @@ Because of that experience, our repository has continued to become more legible 
 
 **Distinct o11y stacks per worktree is overkill.** OpenAI runs separate observability for each worktree. You can get the same result by adding a worktree identifier to your OTel resource attributes and filtering in your existing APM. Same data, no extra infrastructure. I'd love to know how they landed on independent stacks.
 
-**Recurring invariant jobs are interesting, but I'd start per-PR.** Their "golden principles" are enforced by recurring sweeps rather than per-PR gates. I'd love to know why they landed here, given that most of these tech-debt cleanups are reviewed in under a minute and automerged; it feels like changes that could happen on the PR-level. I think the answer is throughput at their scale -- per-PR enforcement is synchronous and blocks the agent loop. FWIW, I think the idea of recurring agentic loops is a good one, e.g. having an agent right size infrastructure outside of what your autoscaling policies support or addressing low-priority vulnerabilities.
+**Recurring invariant jobs are interesting, but I'd start per-PR.** Their "golden principles" are enforced by recurring sweeps rather than per-PR gates. I'd love to know why they landed here, given that most of these tech-debt cleanups are reviewed in under a minute and automerged; it feels like changes that could happen on the PR-level. I think the answer is throughput at their scale -- per-PR enforcement is synchronous and blocks the agent loop. FWIW, I think the idea of recurring agentic loops is a good one, e.g. having an agent right size infrastructure outside of what your autoscaling policies support or addressing low-priority vulnerabilities. This feels like something you would layer in over time instead of out the gate, but I'll see where I'm wrong in practice.
 
 ## What's next
 We're working on closing the feedback loop. The end state is: given a single prompt, the agent can reproduce a bug, record a video, implement a fix, validate the fix by driving the application, record a second video, and open a pull request with evidence. Escalate to a human only when judgment is required.
