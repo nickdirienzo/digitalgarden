@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/post-ideas/reflecting-on-harness-engineering-lessons-from-engineering-with-ai-since-2023/","created":"2026-03-05T12:53:50.049-08:00","updated":"2026-03-05T15:05:42.707-08:00"}
+{"dg-publish":true,"permalink":"/post-ideas/reflecting-on-harness-engineering-lessons-from-engineering-with-ai-since-2023/","created":"2026-03-05T12:53:50.049-08:00","updated":"2026-03-05T15:08:44.001-08:00"}
 ---
 
 I learned about [OpenAI's Symphony project](https://github.com/openai/symphony) today. It is really impressive and reminds me of the experiment I was working on in January with [inc](https://github.com/nickdirienzo/inc). Symphony and OpenAI's post on [Harness Engineering](https://openai.com/index/harness-engineering/) is making me move from the headspace of "experiment" to "how can I bring these capabilities to our daily development without a new tool."
@@ -16,7 +16,7 @@ Because of that experience, our repository has continued to become more legible 
 
 **Type-safe API contracts.** We use `ts-rest` with Zod schemas for every endpoint. This is a mechanical invariant: the agent literally cannot ship an API change that doesn't match the contract. This is the kind of guardrail the post advocates: enforce the boundary, not the implementation.
 
-**So much observability.** For an early stage startup, we have a lot of telemetry. We invested heavily in OpenTelemtry traces, logging, and metrics upfront. We ship OTel data to Observe, which our coding agent can query via MCP. This is still heavily human-in-the-loop given the complexity of the data, but even partial agent access to o11y shortens the diagnosis loop. Before agentic programming, this investment already paid for itself; now it's becoming a foundation for agent-driven debugging.
+**So much observability.** For an early stage startup, we have a lot of telemetry. We invested heavily in OpenTelemtry traces, logging, and metrics upfront. We ship OTel data to Observe, which our coding agent can query via Observe's MCP server. This is still heavily human-in-the-loop given the complexity of the data, but even partial agent access to o11y shortens the diagnosis loop. Before agentic programming, this investment already paid for itself; now it's becoming a foundation for agent-driven debugging.
 
 **Structured logging conventions.** We have a specific logging format (`[Component.method] Action`, context object, `serializeErrorLike()` for errors). This is a pattern agents still violate, which tells me it needs to move from documentation to enforcement (a linter rule, not a paragraph in CLAUDE.md). Fortunately, GritQL makes this a lot more achievable and reduce the feedback loop for agentic development.
 
