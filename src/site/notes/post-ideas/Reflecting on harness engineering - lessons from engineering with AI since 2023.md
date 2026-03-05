@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/post-ideas/reflecting-on-harness-engineering-lessons-from-engineering-with-ai-since-2023/","created":"2026-03-05T12:53:50.049-08:00","updated":"2026-03-05T15:08:44.001-08:00"}
+{"dg-publish":true,"permalink":"/post-ideas/reflecting-on-harness-engineering-lessons-from-engineering-with-ai-since-2023/","created":"2026-03-05T12:53:50.049-08:00","updated":"2026-03-05T15:13:27.002-08:00"}
 ---
 
 I learned about [OpenAI's Symphony project](https://github.com/openai/symphony) today. It is really impressive and reminds me of the experiment I was working on in January with [inc](https://github.com/nickdirienzo/inc). Symphony and OpenAI's post on [Harness Engineering](https://openai.com/index/harness-engineering/) is making me move from the headspace of "experiment" to "how can I bring these capabilities to our daily development without a new tool."
@@ -10,7 +10,7 @@ While building Mirage, we developed much of the product with AI assistance befor
 
 Because of that experience, our repository has continued to become more legible for our coding agents. I view our repo to be 40% aligned with the harness engineering philosophy. This is my reflection on what we do well, where we can improve, and where I disagree with OpenAI's approach.
 ## What we do well
-**[Architecture Decision Records](https://adr.github.io/madr/) (ADRs).** I'm surprised OpenAI's post doesn't mention them. We have 40+ ADRs in `doc/architecture/decisions/`. Before agents, ADRs were aspirational: the team agreed they were valuable but couldn't sustain the discipline of writing them. With agents, ADRs become a flywheel: the agent writes the ADR as part of implementing the decision, and future agents reference those ADRs when building features that touch the same surface. We regularly see Claude cite an ADR unprompted when making an implementation choice. If you've appreciated ADRs before but couldn't keep up, having agents write and leverage them is a beautiful thing. 
+**[Architecture Decision Records](https://adr.github.io/madr/) (ADRs).** I'm surprised OpenAI's post doesn't mention them. We have 40+ ADRs in `doc/architecture/decisions/`. Before agents, ADRs were aspirational: the team agreed they were valuable but couldn't sustain the discipline of writing them. With agents, ADRs become a flywheel: the agent writes the ADR as part of implementing the decision, and future agents reference those ADRs when building features that touch the same surface. We regularly see Claude cite an ADR unprompted when making an implementation choice. If you've appreciated ADRs before but couldn't keep up, having agents write and leverage them is a beautiful thing. We also include ADRs we've rejected and superseded to provide context on decisions we didn't pursue.
 
 **Committed feature plans.** We commit specs to `doc/features/` alongside the code. This gives PR reviewers (both human and agentic) insight into the high level vision and architecture, and whether the code aligns with the plan. We should be doing more of this -- today only some features get committed plans. The goal is all of them.
 
@@ -24,9 +24,12 @@ Because of that experience, our repository has continued to become more legible 
 
 **Fast CI/CD to production.** We have strong CI/CD practices that enable a rollout to production within 15 minutes. This matters more in an agent-driven workflow because throughput increases. More changes shipping means you need faster recovery, not more gates. The confidence to let agents ship comes from knowing you can recover quickly, not from preventing every possible mistake upfront.
 ## Where we can improve
+
+**Agents can't boot our stack yet.** This is the primary problem for us to solve next. The agent can't launch the app, drive it with a browser, and validate its own changes. It's working on static code, blind to whether the change actually works. This is the single biggest gap between where we are and the full harness engineering vision.
+
 **Our CLAUDE.md is the content, not the table of contents.** It grew to 500+ lines and agents started ignoring patterns buried in the middle. OpenAI's approach of a short AGENTS.md (~100 lines) that points to deeper domain docs is right. "Too much guidance becomes non-guidance" is something we experience daily: the agent blatantly ignores patterns that seem simple to follow, like using our error serialization utility or response handling helpers.
 
-**Agents can't boot our stack yet.** We use PM2 for local dev, but the agent can't launch the app, drive it with a browser, and validate its own changes. It's working on static code, blind to whether the change actually works. This is the single biggest gap between where we are and the full harness engineering vision.
+**Include more documentation.** While we have many documents in-repo around architectural decisions and implementation plans, we lack files describing the security model, our product sense, or a simplified high-level view of the architecture. These will further legibility within the repo and improve agentic decision making.
 
 **Documentation is better than enforcement, but enforcement is what works.** If agents keep violating a pattern, it's not a documentation problem: it's an enforcement problem. We need to move more conventions from prose in CLAUDE.md into automated guardrails (GritQL and tests). A lint error the agent has to fix is worth more than a paragraph it might ignore.
 
