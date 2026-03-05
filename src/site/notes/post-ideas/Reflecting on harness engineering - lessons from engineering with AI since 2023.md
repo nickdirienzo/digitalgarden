@@ -1,10 +1,12 @@
 ---
-{"dg-publish":true,"permalink":"/post-ideas/reflecting-on-harness-engineering-lessons-from-engineering-with-ai-since-2023/","created":"2026-03-05T12:53:50.049-08:00","updated":"2026-03-05T14:16:03.814-08:00"}
+{"dg-publish":true,"permalink":"/post-ideas/reflecting-on-harness-engineering-lessons-from-engineering-with-ai-since-2023/","created":"2026-03-05T12:53:50.049-08:00","updated":"2026-03-05T15:05:25.835-08:00"}
 ---
 
-I learned about [OpenAI's Symphony project](https://github.com/openai/symphony) today. It is really impressive and reminds me of the experiment I was working on in January with [inc](https://github.com/nickdirienzo/inc). Symphony reframes inc for me from an experiment to how can I bring these capabilities to our daily development without a new tool.
+I learned about [OpenAI's Symphony project](https://github.com/openai/symphony) today. It is really impressive and reminds me of the experiment I was working on in January with [inc](https://github.com/nickdirienzo/inc). Symphony and OpenAI's post on [Harness Engineering](https://openai.com/index/harness-engineering/) is making me move from the headspace of "experiment" to "how can I bring these capabilities to our daily development without a new tool."
 
-I skimmed through the [Harness Engineering](https://openai.com/index/harness-engineering/) post when it released last month, but didn't deeply sit with it. As a long-time platform engineer, I agree with everything here; these practices are what platform teams have encouraged for decades: shift left with fast feedback loops. While building Mirage, we developed much of the product with AI assistance before coding agents were a thing -- we were pasting code into the OpenAI playground and getting code back. Today, it is a 100x better experience than in 2023, thanks to tools like Claude Code and Codex.
+I skimmed through the post when it released last month, but didn't deeply sit with it until now. As a long-time platform engineer, I agree with a lot here; these practices are what platform teams have encouraged for decades: shift left with fast feedback loops. 
+
+While building Mirage, we developed much of the product with AI assistance before coding agents were a thing -- we were pasting code into the OpenAI playground and getting code back. Today, it is a 100x better experience than in 2023, thanks to tools like Claude Code and Codex.
 
 Because of that experience, our repository has continued to become more legible for our coding agents. I view our repo to be 40% aligned with the harness engineering philosophy. This is my reflection on what we do well, where we can improve, and where I disagree with OpenAI's approach.
 ## What we do well
