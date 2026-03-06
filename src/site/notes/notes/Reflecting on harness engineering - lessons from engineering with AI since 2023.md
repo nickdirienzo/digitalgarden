@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/reflecting-on-harness-engineering-lessons-from-engineering-with-ai-since-2023/","created":"2026-03-05T12:53:50.049-08:00","updated":"2026-03-05T15:20:17.299-08:00"}
+{"dg-publish":true,"permalink":"/notes/reflecting-on-harness-engineering-lessons-from-engineering-with-ai-since-2023/","created":"2026-03-05T12:53:50.049-08:00","updated":"2026-03-06T07:42:25.346-08:00"}
 ---
 
 I learned about [OpenAI's Symphony project](https://github.com/openai/symphony) today. It is really impressive and reminds me of the experiment I was working on in January with [inc](https://github.com/nickdirienzo/inc). Symphony and OpenAI's post on [Harness Engineering](https://openai.com/index/harness-engineering/) is making me move from the headspace of "experiment" to "how can I bring these capabilities to our daily development without a new tool."
@@ -35,6 +35,8 @@ Because of that experience, our repository has continued to become more legible 
 **Documentation is better than enforcement, but enforcement is what works.** If agents keep violating a pattern, it's not a documentation problem: it's an enforcement problem. We need to move more conventions from prose in CLAUDE.md into automated guardrails (GritQL and tests). A lint error the agent has to fix is worth more than a paragraph it might ignore.
 
 **Some ADRs have drifted.** We have 40+ ADRs but some represent completed transitions where the "decision" is now just "how it works," and some foundational early decisions were never recorded. We need a doc-gardening process, which is something OpenAI does with recurring agent jobs, and we should too.
+
+**Better agentic access to tasks and documents.** While we use Notion MCPs, sometimes the documents are too complex to update and leads to a storm of failed requests with HTTP 400 status codes. This tells me that Notion is likely not the best backing store for agents, and we may want to consider a simpler document structure that is plain markdown.
 
 ## Where we disagree
 **PRs per engineer per day is an incomplete metric.** OpenAI reports 3.5 PRs/engineer/day. I'm doing 5+ with Claude Code, with one or two more complex explorations running in the background. We use this metric too since each PR is effectively a feature (+137% output in a week compared to the previous 3 months) -- it loosely measures how frequently the system is changing. But it doesn't capture how much complexity is being added or removed. 
