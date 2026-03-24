@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/post-ideas/notes-from-using-sprites-dev-for-cloud-development-environments/","created":"2026-03-23T17:12:18.713-07:00","updated":"2026-03-23T18:47:42.287-07:00"}
+{"dg-publish":true,"permalink":"/post-ideas/notes-from-using-sprites-dev-for-cloud-development-environments/","created":"2026-03-23T17:12:18.713-07:00","updated":"2026-03-23T18:54:22.280-07:00"}
 ---
 
 Some quick notes from building out a prototype of cloud development environments powered by Fly.io's new product: [Sprites](https://sprites.dev/). (PS: [great notes](https://simonwillison.net/2026/Jan/9/sprites-dev/#developer-sandboxes) from Simon Willison.)
@@ -21,3 +21,4 @@ One nice detail: services don't pin a Sprite as running, but foreground processe
 ## What I'm hoping they build
 * No fleet/pool primitives: Creating a sprite is fast, but bootstrapping a full dev environment isn't. Would love first-class support for sprite pools or template-based creation from a checkpoint, so you can claim a pre-built environment instead of building from scratch each time.
 * No background exec: `sprite exec` blocks until completion. Our setup takes 10+ minutes (npm install, build) and there's no way to fire-and-forget and check status later. Would love a `sprite exec --background` that returns a job ID.
+* Higher reliability: I got a ton of random timeouts and 5xx errors when listing, creating, and executing sprites.
