@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/post-ideas/notes-from-experimenting-with-sprites-dev/","created":"2026-03-23T17:12:18.713-07:00","updated":"2026-03-23T19:51:38.691-07:00"}
+{"dg-publish":true,"permalink":"/post-ideas/notes-from-experimenting-with-sprites-dev/","created":"2026-03-23T17:12:18.713-07:00","updated":"2026-03-23T19:54:07.003-07:00"}
 ---
 
 Some quick notes from building out a prototype of cloud development environments powered by Fly.io's new product: [Sprites](https://sprites.dev/). (PS: [great notes](https://simonwillison.net/2026/Jan/9/sprites-dev/#developer-sandboxes) from Simon Willison.)
 
-We wanted isolated, ephemeral-ish environments where we can spin up an army of AI coding agents in parallel. Each with its own copy of our full product stack, its own data, and no risk of stomping on other agents' processes or storage. Sprites gives us Firecracker VMs that start fast, idle for pennies, and feel like disposable computers rather than infrastructure to manage.
+I wanted isolated, ephemeral-ish environments where we can spin up an army of AI coding agents in parallel. Each with its own copy of our full product stack, its own data, and no risk of stomping on other agents' ports, processes, or storage. Sprites provide Firecracker VMs that start fast, idle for pennies, and feel like disposable computers rather than infrastructure to manage.
 
 It's EC2 without the overhead. `sprite console` gets you a shell and we run `code tunnel` as a Sprite Service for a full IDE. The single external port limitation is a blessing in disguise: smaller attack surface, and Sprite auth sits in front of the public URL automatically. Services don't pin a Sprite as running, but foreground processes do. So you get tight control over when you're paying for compute.
 
