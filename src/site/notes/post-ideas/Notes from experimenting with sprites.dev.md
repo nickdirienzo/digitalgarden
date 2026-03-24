@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/post-ideas/notes-from-experimenting-with-sprites-dev/","created":"2026-03-23T17:12:18.713-07:00","updated":"2026-03-23T19:50:43.611-07:00"}
+{"dg-publish":true,"permalink":"/post-ideas/notes-from-experimenting-with-sprites-dev/","created":"2026-03-23T17:12:18.713-07:00","updated":"2026-03-23T19:51:18.888-07:00"}
 ---
 
 Some quick notes from building out a prototype of cloud development environments powered by Fly.io's new product: [Sprites](https://sprites.dev/). (PS: [great notes](https://simonwillison.net/2026/Jan/9/sprites-dev/#developer-sandboxes) from Simon Willison.)
@@ -22,5 +22,5 @@ While I'd like to say we're using it, I can't yet. There have been a number of r
 ## What I'm hoping they build
 * No fleet/pool primitives: Creating a sprite is fast, but bootstrapping a full dev environment isn't. Would love first-class support for sprite pools or template-based creation from a checkpoint, so you can claim a pre-built environment instead of building from scratch each time.
 * No background exec: `sprite exec` blocks until completion. Our setup takes 10+ minutes (npm install, build) and there's no way to fire-and-forget and check status later. Would love a `sprite exec --background` that returns a job ID.
-* Higher reliability: TCP timeouts and 5xx errors on basic operations like listing, creating, and connecting to sprites. I was evaluating this as a path toward agent sandboxes in the product, but the platform needs to be rock-solid for interactive dev work before we can trust it with autonomous agents.
+* Higher reliability: TCP timeouts and 5xx errors on basic operations like listing, creating, and connecting to sprites. I was evaluating this as a path toward agent sandboxes in the product, but the platform needs to be solid for interactive dev work before I can trust it with autonomous agents.
 * CLI improvements: dropping out of `sprite console` eats my ghostty session. Text formatting is all over the place. I have to `reset` to get everything back.
