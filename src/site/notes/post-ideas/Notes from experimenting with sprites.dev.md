@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/post-ideas/notes-from-experimenting-with-sprites-dev/","created":"2026-03-23T17:12:18.713-07:00","updated":"2026-03-23T19:38:04.434-07:00"}
+{"dg-publish":true,"permalink":"/post-ideas/notes-from-experimenting-with-sprites-dev/","created":"2026-03-23T17:12:18.713-07:00","updated":"2026-03-23T19:50:43.611-07:00"}
 ---
 
 Some quick notes from building out a prototype of cloud development environments powered by Fly.io's new product: [Sprites](https://sprites.dev/). (PS: [great notes](https://simonwillison.net/2026/Jan/9/sprites-dev/#developer-sandboxes) from Simon Willison.)
@@ -11,12 +11,13 @@ It's EC2 without the overhead. `sprite console` gets you a shell and we run `cod
 While I'd like to say we're using it, I can't yet. There have been a number of road bumps during my exploration that make Sprites not yet usable for production, let alone development environments.
 
 ## What's great
+* Isolation: Every sprite is its own Firecracker VM with a separate kernel. No shared-kernel container escape risk, no port conflicts, no filesystem bleed between environments. This is the right security boundary for running untrusted AI-generated code.
 * Pricing: Sprites go "warm" when not in use, meaning you only pay for storage.
-* `sprite-env services`: Long-lived process management that survives session disconnects and auto-restarts on wake. 
 * Pre-loaded runtimes: Node, Python, Go, Rust, Java, PostgreSQL client, git, Claude Code all come pre-installed. Our setup script went from "install everything from scratch" to "wire up our specific pieces."
-* `--http-post exec`: Reliable non-interactive command execution. WebSocket-based exec had issues with connections dropping during `git clone`. For some reason, switching to HTTP POST fixed it immediately.
 * Filesystem persistence: Everything written to disk survives across sessions, warm/cold cycles, and reboots. Clone once, it's there forever.
 * Checkpoints: Snapshot your entire filesystem state. Useful for saving a known-good setup so you don't re-run a 10+ minute bootstrap.
+* `--http-post exec`: Reliable non-interactive command execution. WebSocket-based exec had issues with connections dropping during `git clone`. For some reason, switching to HTTP POST fixed it immediately.
+* `sprite-env services`: Long-lived process management that survives session disconnects and auto-restarts on wake. 
 
 ## What I'm hoping they build
 * No fleet/pool primitives: Creating a sprite is fast, but bootstrapping a full dev environment isn't. Would love first-class support for sprite pools or template-based creation from a checkpoint, so you can claim a pre-built environment instead of building from scratch each time.
