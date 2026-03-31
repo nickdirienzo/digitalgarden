@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/the-software-supply-chain-is-an-active-combat-zone/","created":"2026-03-31T12:43:35.793-07:00","updated":"2026-03-31T15:44:32.848-07:00"}
+{"dg-publish":true,"permalink":"/notes/the-software-supply-chain-is-an-active-combat-zone/","created":"2026-03-31T12:43:35.793-07:00","updated":"2026-03-31T15:49:43.170-07:00"}
 ---
 
 Software supply chain attacks are increasing in frequency and severity. This month alone we've seen multiple unrelated campaigns hitting the open-source ecosystem simultaneously. This isn't one bad week. It's the new normal.
@@ -13,7 +13,7 @@ Two weeks ago, an automated bot exploited a misconfigured `pull_request_target` 
 
 Just today, [Cisco's source code was stolen](https://www.bleepingcomputer.com/news/security/cisco-source-code-stolen-in-trivy-linked-dev-environment-breach/) leveraging the Trivy vector. SANS analysts believe TeamPCP may have a stockpile of compromised publishing credentials and could be operating as an Initial Access Broker. This is likely not over.
 
-Separately, and this appears to be a different actor entirely, [axios was compromised](https://socket.dev/blog/axios-npm-package-compromised) on npm yesterday. The attacker used a stolen long-lived npm access token to publish malicious versions of one of the most widely used packages in the JavaScript ecosystem (~100M weekly downloads).
+Separately, and this appears to be a different actor entirely, [axios was compromised](https://socket.dev/blog/axios-npm-package-compromised) on npm yesterday. The attacker used a stolen long-lived npm access token to publish malicious versions of one of the most widely used packages in the JavaScript ecosystem.
 
 Last September, the [Shai-Hulud campaign](https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem) hijacked 18 popular npm packages by phishing maintainers with fake 2FA reset emails. As an engineer, we tend to think we're too smart to fall for social engineering. We run these simulations for a living at Mirage, and I can tell you: we're not. The attacks are better than most people expect.
 
