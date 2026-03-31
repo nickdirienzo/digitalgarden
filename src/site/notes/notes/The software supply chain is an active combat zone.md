@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/the-software-supply-chain-is-an-active-combat-zone/","tags":["essay"],"created":"2026-03-31T12:43:35.793-07:00","updated":"2026-03-31T15:40:36.927-07:00"}
+{"dg-publish":true,"permalink":"/notes/the-software-supply-chain-is-an-active-combat-zone/","created":"2026-03-31T12:43:35.793-07:00","updated":"2026-03-31T15:44:32.848-07:00"}
 ---
 
 Software supply chain attacks are increasing in frequency and severity. This month alone we've seen multiple unrelated campaigns hitting the open-source ecosystem simultaneously. This isn't one bad week. It's the new normal.
