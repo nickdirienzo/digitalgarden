@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/flight-an-experimental-coding-harness/","created":"2026-04-10T14:43:02.164-07:00","updated":"2026-04-27T22:30:54.809-07:00"}
+{"dg-publish":true,"permalink":"/notes/flight-an-experimental-coding-harness/","created":"2026-04-10T14:43:02.164-07:00","updated":"2026-04-27T23:02:37.699-07:00"}
 ---
 
 ## Validation is the bottleneck
@@ -17,7 +17,7 @@ We have an EC2 template for Coder community edition that starts a pre-baked AMI 
 
 Today, the intention is for these devboxes to be ephemeral. This reduces our patch management surface area and costs, while allowing us to spin up many EC2 instances concurrently. Already I'm seeing this step take longer than is pleasant, so we'll need to optimize here.
 
-We had the ability to spin these up, but there was friction in getting there. Logging into Coder, clicking a button, connecting to Claude via the web app. It was all rather unpleasant, despite it feeling like a step in the right direction. I believe that good internal tools are products in their own right, so I decided to make this experience better.
+We had the ability to spin these up, but there was friction in getting there. Logging into Coder, clicking a button, connecting to Claude via the web app. It was all rather unpleasant, despite it feeling like a step in the right direction. I believe that good [[talks/PyBay 2023 - Infrastructure as a Product\|internal tools should be products]] in their own right, so I decided to make this experience better.
 ## Introducing Flight
 [Flight](https://github.com/mirage-security/flight)  is an open-source, pluggable Claude Code orchestrator. It builds on a bunch of experiments in harness engineering we've run over the last few months; we don't write code by hand anymore, we iterate heavily on plans, and we like validating features end-to-end. Flight gives us a frontend to provision workspaces to run the full Mirage stack in isolation, but the lifecycle scripts are just that -- any project could use this as a frontend if they wanted to.
 
