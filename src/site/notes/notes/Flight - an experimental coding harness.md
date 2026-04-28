@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/flight-an-experimental-coding-harness/","created":"2026-04-10T14:43:02.164-07:00","updated":"2026-04-27T22:28:13.686-07:00"}
+{"dg-publish":true,"permalink":"/notes/flight-an-experimental-coding-harness/","created":"2026-04-10T14:43:02.164-07:00","updated":"2026-04-27T22:30:54.809-07:00"}
 ---
 
 ## Validation is the bottleneck
@@ -32,7 +32,7 @@ The team has started to use Flight in anger this week. It's early, so more notes
 A few things that are exciting to see:
 * The inline plan review tool changed the iteration loop more than I expected. It's a slight quality of life improvement but now I can batch review without having to copy-paste from the plan. It's like a simpler version of Ultraplan.
 * Using Opus 4.6 1M means I don't really think about handoffs or compaction anymore. That used to be a real source of friction. This unlocks more native conversational programming.
-* Shareable ngrok links are useful. We're giving feedback on features earlier than we ever have. It's making feature development way more collaborative at the build stage.
+* Shareable ngrok links are useful. We're giving feedback on features earlier than we ever have. It's making feature development way more collaborative and more fun because we can see live updates to the site as the agent works behind the scenes.
 ## Take flight
 We have a bunch of ideas for where Flight goes next. Pluggability is the big one. I want this to work like VSCode extensions, not a monolith. Open source brought us to where we are today, and I'm sad to see closed-source making such a strong comeback for developer tools and infrastructure.
 
