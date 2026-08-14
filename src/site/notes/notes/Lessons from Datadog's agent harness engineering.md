@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/lessons-from-datadog-s-agent-harness-engineering/","created":"2026-03-31T12:00:18.190-07:00","updated":"2026-03-31T12:39:46.175-07:00"}
+{"dg-publish":true,"permalink":"/notes/lessons-from-datadog-s-agent-harness-engineering/","created":"2026-03-31T12:00:18.190-07:00","updated":"2026-03-31T12:39:46.175-07:00","dg-note-properties":{}}
 ---
 
 I recently read [Datadog's blog post](https://www.datadoghq.com/blog/ai/harness-first-agents/) on how they built a Redis implementation in Rust with AI. There were a number of ideas here that resonated with how I build.

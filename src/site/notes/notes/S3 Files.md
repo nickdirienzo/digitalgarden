@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/s3-files/","created":"2026-04-07T14:51:34.513-07:00","updated":"2026-04-07T15:12:41.714-07:00"}
+{"dg-publish":true,"permalink":"/notes/s3-files/","created":"2026-04-07T14:51:34.513-07:00","updated":"2026-04-07T15:12:41.714-07:00","dg-note-properties":{}}
 ---
 
 With AI agents depending on filesystems for searching, editing, and storing context, it was only a matter of time before AWS had a cloud-native answer.

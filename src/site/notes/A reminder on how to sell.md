@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/a-reminder-on-how-to-sell/","created":"2025-06-11T15:07:35.696-07:00","updated":"2025-06-13T14:38:50.753-07:00"}
+{"dg-publish":true,"permalink":"/a-reminder-on-how-to-sell/","created":"2025-06-11T15:07:35.696-07:00","updated":"2025-06-13T14:38:50.753-07:00","dg-note-properties":{}}
 ---
 
 I tried buying software last week and instead got a reminder on how to sell

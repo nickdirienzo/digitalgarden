@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/post-ideas/notes-from-experimenting-with-sprites-dev/","created":"2026-03-23T17:12:18.713-07:00","updated":"2026-03-23T19:54:07.003-07:00"}
+{"dg-publish":true,"permalink":"/post-ideas/notes-from-experimenting-with-sprites-dev/","created":"2026-03-23T17:12:18.713-07:00","updated":"2026-03-23T19:54:07.003-07:00","dg-note-properties":{}}
 ---
 
 Some quick notes from building out a prototype of cloud development environments powered by Fly.io's new product: [Sprites](https://sprites.dev/). (PS: [great notes](https://simonwillison.net/2026/Jan/9/sprites-dev/#developer-sandboxes) from Simon Willison.)

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/goodbye-docker-desktop-hello-orb-stack/","created":"2025-07-12T07:00:55.689-07:00","updated":"2025-07-12T07:11:45.387-07:00"}
+{"dg-publish":true,"permalink":"/goodbye-docker-desktop-hello-orb-stack/","created":"2025-07-12T07:00:55.689-07:00","updated":"2025-07-12T07:11:45.387-07:00","dg-note-properties":{"tags":[]}}
 ---
 
 My partner runs a small software company. In a recent update, they shared:

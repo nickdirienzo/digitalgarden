@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/the-internet-used-to-be-weird-because-of-humans/","created":"2025-05-17T13:01:07.775-07:00","updated":"2025-05-28T22:19:03.481-07:00"}
+{"dg-publish":true,"permalink":"/the-internet-used-to-be-weird-because-of-humans/","created":"2025-05-17T13:01:07.775-07:00","updated":"2025-05-28T22:19:03.481-07:00","dg-note-properties":{}}
 ---
 
 Maybe it's nostalgia but I miss the earlier days of the internet. The time when everything wasn't a walled garden. Communities were smaller and fragmented. Content wasn't an optimization game or AI slop. You knew you were talking to a person. It was a fun, wild time between forums and flash games.

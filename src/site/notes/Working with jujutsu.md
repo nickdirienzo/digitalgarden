@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2026-01-18T08:51:20.673-08:00"}
+{"dg-publish":true,"permalink":"/working-with-jujutsu/","created":"2025-12-13T21:56:24.003-08:00","updated":"2026-01-18T08:51:20.673-08:00","dg-note-properties":{}}
 ---
 
 Scattered, thoughts, tips and tricks working with [`jj`](https://www.jj-vcs.dev/latest/).

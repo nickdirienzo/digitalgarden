@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/talks/2025-ub-forge-talk-voice-ai-for-builders/","tags":["talk"],"created":"2025-09-24T16:06:43.486-07:00","updated":"2026-01-26T22:01:15.375-08:00"}
+{"dg-publish":true,"permalink":"/talks/2025-ub-forge-talk-voice-ai-for-builders/","tags":["talk"],"created":"2025-09-24T16:06:43.486-07:00","updated":"2026-01-26T22:01:15.375-08:00","dg-note-properties":{"tags":["talk"]}}
 ---
 
 I gave this talk to the [UB Forge](https://www.ubforge.com/) community virtually on Sept 24, 2025.

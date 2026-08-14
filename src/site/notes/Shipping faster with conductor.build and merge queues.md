@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/shipping-faster-with-conductor-build-and-merge-queues/","created":"2026-02-11T20:24:21.136-08:00","updated":"2026-02-28T13:41:21.988-08:00"}
+{"dg-publish":true,"permalink":"/shipping-faster-with-conductor-build-and-merge-queues/","created":"2026-02-11T20:24:21.136-08:00","updated":"2026-02-28T13:41:21.988-08:00","dg-note-properties":{"tags":null}}
 ---
 
 I feel like I hit a new level of productivity this week due to some changes in my tooling.

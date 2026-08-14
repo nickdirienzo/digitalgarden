@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/flight-an-experimental-coding-harness/","created":"2026-04-10T14:43:02.164-07:00","updated":"2026-04-27T23:02:37.699-07:00"}
+{"dg-publish":true,"permalink":"/notes/flight-an-experimental-coding-harness/","created":"2026-04-10T14:43:02.164-07:00","updated":"2026-04-27T23:02:37.699-07:00","dg-note-properties":{}}
 ---
 
 ## Validation is the bottleneck

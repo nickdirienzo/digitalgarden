@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/what-would-an-enterprise-open-claw-look-like/","created":"2026-03-01T19:36:48.164-08:00","updated":"2026-03-01T20:34:57.017-08:00"}
+{"dg-publish":true,"permalink":"/what-would-an-enterprise-open-claw-look-like/","created":"2026-03-01T19:36:48.164-08:00","updated":"2026-03-01T20:34:57.017-08:00","dg-note-properties":{}}
 ---
 
 Clearly my brain is obsessing over the Claw ecosystem this weekend since this is the 3rd post in 48 hours about this topic. 

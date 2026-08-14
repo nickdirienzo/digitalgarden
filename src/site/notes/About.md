@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/about/","tags":["about"],"created":"2026-03-01T02:55:40.519-08:00","updated":"2026-03-01T11:52:31.027-08:00"}
+{"dg-publish":true,"permalink":"/about/","tags":["about"],"created":"2026-03-01T02:55:40.519-08:00","updated":"2026-03-01T11:52:31.027-08:00","dg-note-properties":{"tags":["about"]}}
 ---
 
 I'm currently building [Mirage Security](https://miragesecurity.ai) with my longtime friend [Ross Lazerowitz](https://rosslazer.com/).

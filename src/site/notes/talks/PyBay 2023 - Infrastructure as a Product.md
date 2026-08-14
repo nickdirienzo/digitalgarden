@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/talks/py-bay-2023-infrastructure-as-a-product/","tags":["talk"],"created":"2026-04-27T23:00:02.473-07:00","updated":"2026-04-27T23:01:01.571-07:00"}
+{"dg-publish":true,"permalink":"/talks/py-bay-2023-infrastructure-as-a-product/","tags":["talk"],"created":"2026-04-27T23:00:02.473-07:00","updated":"2026-04-27T23:01:01.571-07:00","dg-note-properties":{"tags":["talk"]}}
 ---
 
 In 2023, I gave a talk on lessons I learned building on platform engineering teams.

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T10:29:59.003-08:00"}
+{"dg-publish":true,"permalink":"/what-if-nano-claw-skills-didn-t-need-to-change-the-codebase/","created":"2026-02-28T09:34:02.709-08:00","updated":"2026-03-01T10:29:59.003-08:00","dg-note-properties":{"tags":null}}
 ---
 
 I read [Don't trust AI agents](https://nanoclaw.dev/blog/nanoclaw-security-model) this morning by the creator of NanoClaw ([Gavriel Cohen](https://x.com/Gavriel_Cohen)). I generally agree with this take: we shouldn't trust our agents and provide safety-by-default for agentic behavior.

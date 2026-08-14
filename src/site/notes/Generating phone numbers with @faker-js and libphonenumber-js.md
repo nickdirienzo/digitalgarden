@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/generating-phone-numbers-with-faker-js-and-libphonenumber-js/","created":"2025-05-22T20:47:24.161-07:00","updated":"2025-07-12T07:42:43.717-07:00"}
+{"dg-publish":true,"permalink":"/generating-phone-numbers-with-faker-js-and-libphonenumber-js/","created":"2025-05-22T20:47:24.161-07:00","updated":"2025-07-12T07:42:43.717-07:00","dg-note-properties":{}}
 ---
 
 One of the interview questions I use for Mirage is around formatting phone numbers. If you've worked around telephony at all, you know that this is not straightforward. 

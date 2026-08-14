@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/learnings-from-building-inc/","created":"2026-01-25T12:18:29.562-08:00","updated":"2026-01-26T22:48:56.057-08:00"}
+{"dg-publish":true,"permalink":"/learnings-from-building-inc/","created":"2026-01-25T12:18:29.562-08:00","updated":"2026-01-26T22:48:56.057-08:00","dg-note-properties":{"tags":null}}
 ---
 
 I'm experimenting with agent orchestration on top of Claude Code. It's inspired a lot by gastown and others, but it's my own personal take on it. It's called [inc](https://github.com/nickdirienzo/inc).

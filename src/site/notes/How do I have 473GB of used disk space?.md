@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/how-do-i-have-473-gb-of-used-disk-space/","created":"2025-07-12T06:30:34.981-07:00","updated":"2025-07-12T07:37:45.521-07:00"}
+{"dg-publish":true,"permalink":"/how-do-i-have-473-gb-of-used-disk-space/","created":"2025-07-12T06:30:34.981-07:00","updated":"2025-07-12T07:37:45.521-07:00","dg-note-properties":{}}
 ---
 
 I was trying to run some tests today and out of nowhere [[Goodbye Docker Desktop, hello OrbStack\|OrbStack]] crashes so all my Docker containers are no longer reachable. 

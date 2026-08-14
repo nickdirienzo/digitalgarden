@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/slack-notifications-via-ntfy-sh/","created":"2026-02-15T13:52:34.973-08:00","updated":"2026-02-15T14:02:41.839-08:00"}
+{"dg-publish":true,"permalink":"/slack-notifications-via-ntfy-sh/","created":"2026-02-15T13:52:34.973-08:00","updated":"2026-02-15T14:02:41.839-08:00","dg-note-properties":{}}
 ---
 
 I've been trying to not be too attached to my phone. Over the last couple of years, I've dropped Tiktok, Instagram, YouTube Shorts (clearly, there's a pattern). Every time I have Slack on it, I end up treating it like an infinite feed too, so I try not to have it on my phone either.

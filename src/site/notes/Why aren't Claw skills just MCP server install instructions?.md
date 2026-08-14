@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/why-aren-t-claw-skills-just-mcp-server-install-instructions/","tags":["essay"],"created":"2026-03-01T10:32:39.820-08:00","updated":"2026-03-01T12:01:05.599-08:00"}
+{"dg-publish":true,"permalink":"/why-aren-t-claw-skills-just-mcp-server-install-instructions/","tags":["essay"],"created":"2026-03-01T10:32:39.820-08:00","updated":"2026-03-01T12:01:05.599-08:00","dg-note-properties":{"tags":["essay"]}}
 ---
 
 I've been thinking about claws since OpenClaw released. I think we all have (e.g. [Karpathy's tweet](https://x.com/karpathy/status/2024987174077432126)).

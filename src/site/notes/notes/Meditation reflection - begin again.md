@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/meditation-reflection-begin-again/","created":"2026-03-02T09:16:41.610-08:00","updated":"2026-03-03T11:14:16.023-08:00"}
+{"dg-publish":true,"permalink":"/notes/meditation-reflection-begin-again/","created":"2026-03-02T09:16:41.610-08:00","updated":"2026-03-03T11:14:16.023-08:00","dg-note-properties":{}}
 ---
 
 I've tried to meditate off and on for the last decade. It hasn't really stuck yet, but that's not to say it will never stick. 
