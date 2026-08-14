@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/til/git-hub-pr-comments-live-in-three-different-places/","tags":["til"],"created":"2026-08-13T23:36:34.695-07:00","updated":"2026-08-14T09:26:23.995-07:00","dg-note-properties":{"tags":["til"]}}
+{"dg-publish":true,"permalink":"/til/git-hub-pr-comments-live-in-three-different-places/","tags":["til"],"created":"2026-08-13T23:36:34.695-07:00","updated":"2026-08-14T09:27:57.707-07:00","dg-note-properties":{"tags":["til"]}}
 ---
 
 TIL that `gh pr view --json comments` does not return inline review comments, which Copilot makes heavy use of.
@@ -18,5 +18,3 @@ And GitHub has managed to make this even more confusing by having Copilot post i
 We've since added a line to our `AGENTS.md` telling agents to check all three channels. 
 
 Hope this helps someone else.
-
-And GitHub, can you please fix this?
