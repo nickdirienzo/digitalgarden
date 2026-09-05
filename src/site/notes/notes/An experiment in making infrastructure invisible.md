@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/an-experiment-in-making-infrastructure-invisible/","created":"2026-02-07T22:58:25.581-08:00","updated":"2026-09-04T22:27:53.983-07:00","dg-note-properties":{"tags":null}}
+{"dg-publish":true,"permalink":"/notes/an-experiment-in-making-infrastructure-invisible/","created":"2026-02-07T22:58:25.581-08:00","updated":"2026-09-04T22:28:23.468-07:00","dg-note-properties":{"tags":null}}
 ---
 
 I started writing this earlier in the year (Feb 2026), and put it down for many months. I wish I posted this while I was building but I was disappointed with the result so I decided to not post it. Anyway, I realized I should just post it because that's what a digital garden is about.
@@ -31,6 +31,6 @@ I built a [research proof of concept](https://github.com/nickdirienzo/invisible)
 
 Then I wrote a counter: read the `Map`, add one, write it back. On one process it's fine. On two replicas it drops increments, and nothing in the source tells you that. The code was correct locally and wrong in a HA setting, which is exactly the difference I was trying to make disappear.
 
-And that is running head-first into what I've started calling [Waldo's Wall](https://waldo.scholars.harvard.edu/publications/note-distributed-computing). You can give local and remote things the same interface, but you can't give them the same semantics. I loved my Distributed Systems and Operating Systems courses in university, so I probably should have seen this coming. But I didn't want to believe it was real; I felt like I could engineer around the problem. 
+I found myself running head-first into what I've started calling [Waldo's Wall](https://waldo.scholars.harvard.edu/publications/note-distributed-computing). You can give local and remote things the same interface, but you can't give them the same semantics. I loved my Distributed Systems and Operating Systems courses in university, so I probably should have seen this coming. But I didn't want to believe it was real; I felt like I could engineer around the problem. 
 
 Clearly, I'm a bit stubborn. But at least I tried. I learned some new things. And I learned about a really great paper on distributed computing in 1994 that still applies in 2026.
