@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/software-engineering-operating-system/","created":"2026-09-10T16:36:25-07:00","updated":"2026-09-10T16:36:25-07:00","dg-note-properties":{}}
+{"dg-publish":true,"permalink":"/notes/software-engineering-operating-system/","tags":["essay"],"created":"2026-09-10T16:36:25-07:00","updated":"2026-09-10T16:36:25-07:00","dg-note-properties":{"tags":["essay"]}}
 ---
 
 As an industry, we've been talking a lot about the [dark factory pattern](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/).
