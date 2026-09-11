@@ -1,20 +1,20 @@
 ---
-{"dg-publish":true,"permalink":"/notes/software-engineering-operating-system/","tags":["essay"],"created":"2026-09-10T16:36:25-07:00","updated":"2026-09-10T16:36:25-07:00","dg-note-properties":{"tags":["essay"]}}
+{"dg-publish":true,"permalink":"/notes/software-engineering-operating-system/","tags":["essay"],"created":"2026-09-10T16:36:25-07:00","updated":"2026-09-10T17:05:15-07:00","dg-note-properties":{"tags":["essay"]}}
 ---
 
 As an industry, we've been talking a lot about the [dark factory pattern](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/).
 
-As I've been building out the foundations for Mirage's own dark factory, I've started to think factory is the wrong noun for the underlying system. A factory describes an autonomous delivery system: inputs go in and some desired output comes out. What we're actually building underneath it is the platform that lets many different systems and processes run, interact, and evolve independently.
+As I've been building out the foundations for Mirage's own dark factory, I've started to think factory describes one layer of what we're building. A factory describes an autonomous delivery system: inputs go in and some desired output comes out. Underneath that factory, though, is a platform that lets many different systems and processes run, interact, and evolve independently.
 
-OpenAI's recent [Defense Factory](https://openai.com/the-defense-factory/) made me start questioning whether factory is the right noun for the underlying system. It's essentially the same idea as a software factory, but applied to security remediation.
+OpenAI's recent [Defense Factory](https://openai.com/the-defense-factory/) made that distinction a bit clearer for me. It's essentially the same idea as a software factory, but applied to security remediation.
 
 The input is different. Instead of starting with a feature spec, it starts with a vulnerability. The acceptance criteria is different too: the vulnerability is no longer exploitable in our software system.
 
-But both workflows ultimately need to produce the same thing: a change.
+But both ultimately need to produce the same thing: a change.
 
 And once that change exists, it enters the same lifecycle as any other change: test, verify, authorize, deploy, and observe. The systems have different bounded responsibilities and acceptance criteria, but they're both trying to safely move the software system from one state to another.
 
-So I don't think these are really separate factories in the architectural sense. They're different autonomous systems made up of processes that ultimately depend on the same underlying platform.
+The factories are different, but much of the machinery powering them is the same.
 
 You know what else is built around autonomous processes? Operating systems.
 
@@ -28,6 +28,6 @@ Bringing this down from theory to practice, I'm describing durable workflow orch
 
 Of course autonomous workflows will be developed independently and in parallel, but they need a coherent platform underneath them. That's what I mean by a Software Engineering Operating System: a shared control plane for coordinating the processes that build, test, secure, deploy, and operate software.
 
-With this lens, the things we call "factories" sit on top of the Software Engineering Operating System. A Defense Factory is one workflow. A Software Factory is another. Dependency maintenance, code review, pentesting, and deployment are others.
+With this lens, factories sit on top of the Software Engineering Operating System. A Defense Factory is one autonomous delivery system. A Software Factory is another. Dependency maintenance, code review, pentesting, and deployment can all participate in their own workflows while relying on the same underlying platform.
 
 Maybe I've been working on platform-engineering-shaped problems for too long, but none of this feels fundamentally new. We've been building pipelines and automating pieces of the software delivery lifecycle for decades. What's changing is that more of the processes participating in that lifecycle can now operate autonomously.
