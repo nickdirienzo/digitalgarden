@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/notes/software-engineering-operating-system/","tags":["essay"],"created":"2026-09-10T16:36:25-07:00","updated":"2026-09-10T17:05:15-07:00","dg-note-properties":{"tags":["essay"]}}
+{"dg-publish":true,"permalink":"/notes/software-engineering-operating-system/","tags":["essay"],"created":"2026-09-10T16:36:25-07:00","updated":"2026-09-10T17:08:23-07:00","dg-note-properties":{"tags":["essay"]}}
 ---
 
 As an industry, we've been talking a lot about the [dark factory pattern](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/).
@@ -14,7 +14,7 @@ But both ultimately need to produce the same thing: a change.
 
 And once that change exists, it enters the same lifecycle as any other change: test, verify, authorize, deploy, and observe. The systems have different bounded responsibilities and acceptance criteria, but they're both trying to safely move the software system from one state to another.
 
-The factories are different, but much of the machinery powering them is the same.
+The factories are different, but much of the foundation powering them is the same. The factory describes the autonomous system organized around an outcome. I'm interested in the platform underneath it that lets its processes run, interact, and share those foundations.
 
 You know what else is built around autonomous processes? Operating systems.
 
