@@ -1,8 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/notes/software-engineering-operating-system/","tags":["essay"],"created":"2026-09-10T16:36:25-07:00","updated":"2026-09-10T17:08:23-07:00","dg-note-properties":{"tags":["essay"]}}
+{"dg-publish":true,"permalink":"/notes/software-engineering-operating-system/","tags":["essay"],"created":"2026-09-10T16:36:25-07:00","updated":"2026-09-10T18:09:22-07:00","dg-note-properties":{"tags":["essay"]}}
 ---
 
 As an industry, we've been talking a lot about the [dark factory pattern](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/).
+
+Software Factory, Defense Factory, Testing Factory are different autonomous systems, but they all need much of the same underlying machinery: scheduling, execution, identity, permissions, isolation, verification, deployment, and failure recovery. I'm increasingly interested in that shared platform underneath them. I think of it as a Software Engineering Operating System.
 
 As I've been building out the foundations for Mirage's own dark factory, I've started to think factory describes one layer of what we're building. A factory describes an autonomous delivery system: inputs go in and some desired output comes out. Underneath that factory, though, is a platform that lets many different systems and processes run, interact, and evolve independently.
 
